@@ -1,26 +1,26 @@
-using DLSU.SpacePirates.WeaponSystem.Data;
-using DLSU.SpacePirates.WeaponSystem.Interfaces;
+using DLSU.SpacePirates.WeaponSystem.ScriptableObjects;
 using UnityEngine;
 
-namespace DLSU.SpacePirates.WeaponSystem
+namespace DLSU.SpacePirates.WeaponSystem.Example
 {
 	/// <summary>
 	/// This is an implementation example.
+	/// This is not meant to be used for production.
 	/// </summary>
-	public class Entity : MonoBehaviour, IWeaponEquipment
+	[RequireComponent(typeof(ShootWeapon))]
+	public class Entity : MonoBehaviour
 	{
 		[SerializeField]
-		private WeaponSystemData weaponSystemData;
-		[SerializeField]
-		private Weapon equippedWeapon;
+		private WeaponDatabase weaponDatabase;
 		private float timer = 0.5f;
 
-		public WeaponSystemData WeaponSystemData => weaponSystemData;
+		public ShootWeapon Shooter { get; private set; }
 
-		public Weapon EquippedWeapon
+		public WeaponDatabase WeaponDatabase => weaponDatabase;
+
+		private void Awake()
 		{
-			get => equippedWeapon;
-			set => equippedWeapon = value;
+			Shooter = GetComponent<ShootWeapon>();
 		}
 
 		private void Update()
@@ -32,17 +32,17 @@ namespace DLSU.SpacePirates.WeaponSystem
 
 			timer = 0.5f;
 
-			if (EquippedWeapon == null)
+			if (Shooter.Equipment.EquippedWeapon == null)
 				// Give the player the default weapon.
-				EquippedWeapon = new Weapon(WeaponSystemData.DefaultPlayerWeaponData);
+				Shooter.Equipment.EquippedWeapon = WeaponDatabase.DefaultPlayerWeapon;
 
-			if (EquippedWeapon == null)
+			if (Shooter.Equipment.EquippedWeapon == null)
 				return;
 
-			EquippedWeapon.Fire(transform.position, transform.right);
+			Shooter.Fire(transform.position, transform.right);
 
-			if (EquippedWeapon.ShouldDiscard)
-				EquippedWeapon = new Weapon(WeaponSystemData.DefaultPlayerWeaponData);
+			if (Shooter.ShouldDiscard)
+				Shooter.Equipment.EquippedWeapon = WeaponDatabase.DefaultPlayerWeapon;
 		}
 	}
 }

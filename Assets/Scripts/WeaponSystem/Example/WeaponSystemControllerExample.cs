@@ -1,20 +1,22 @@
-using DLSU.SpacePirates.WeaponSystem.Data;
+using DLSU.SpacePirates.WeaponSystem.Interfaces;
+using DLSU.SpacePirates.WeaponSystem.ScriptableObjects;
 using UnityEditor;
 using UnityEngine;
 
-namespace DLSU.SpacePirates.WeaponSystem
+namespace DLSU.SpacePirates.WeaponSystem.Example
 {
 	/// <summary>
 	/// This is an implementation example.
+	/// This is not meant to be used for production.
 	/// </summary>
 	public class WeaponSystemControllerExample : MonoBehaviour
 	{
 		[SerializeField]
-		private WeaponSystemData data;
+		private WeaponDatabase database;
 		[SerializeField]
 		private Entity player;
 
-		public WeaponSystemData Data => data;
+		public WeaponDatabase Database => database;
 
 		public Entity Player => player;
 	}
@@ -30,14 +32,22 @@ namespace DLSU.SpacePirates.WeaponSystem
 			{
 				WeaponSystemControllerExample controller =
 					Selection.activeGameObject.GetComponent<WeaponSystemControllerExample>();
-				controller.Data.SpawnAmmoPickUp(controller.Player.EquippedWeapon.Data, Random.insideUnitCircle * 10f);
+
+				GameObject @object = Instantiate(controller.Database.WeaponPickUpPrefab);
+				WeaponPickUp pickUp = @object.GetComponent<WeaponPickUp>();
+				pickUp.Weapon = controller.Player.Shooter.Equipment.EquippedWeapon;
+				@object.transform.position = Random.insideUnitCircle * 10f;
 			}
 
 			if (GUILayout.Button("Spawn Weapon"))
 			{
 				WeaponSystemControllerExample controller =
 					Selection.activeGameObject.GetComponent<WeaponSystemControllerExample>();
-				controller.Data.SpawnWeaponPickUp(controller.Data.RandomWeaponData, Random.insideUnitCircle * 10f);
+
+				GameObject @object = Instantiate(controller.Database.WeaponPickUpPrefab);
+				WeaponPickUp pickUp = @object.GetComponent<WeaponPickUp>();
+				pickUp.Weapon = controller.Database.RandomWeapon;
+				@object.transform.position = Random.insideUnitCircle * 10f;
 			}
 		}
 	}

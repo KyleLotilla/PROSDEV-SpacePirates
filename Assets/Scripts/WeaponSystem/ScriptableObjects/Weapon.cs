@@ -1,21 +1,18 @@
 using DLSU.SpacePirates.WeaponSystem.Utilities;
 using UnityEngine;
 
-namespace DLSU.SpacePirates.WeaponSystem.Data
+namespace DLSU.SpacePirates.WeaponSystem.ScriptableObjects
 {
 	[CreateAssetMenu(
-		fileName = "WeaponData",
-		menuName = "ScriptableObjects/WeaponData",
+		fileName = "Weapon",
+		menuName = "ScriptableObjects/Weapon",
 		order = 1
 	)]
-	public class WeaponData : ScriptableObject
+	public class Weapon : ScriptableObject
 	{
-		[Tooltip("Weapon pick-up prefab for this weapon.")]
+		[Tooltip("Sprite for this weapon.")]
 		[SerializeField]
-		private GameObject pickUpPrefab;
-		[Tooltip("Ammo pick-up prefab for this weapon.")]
-		[SerializeField]
-		private GameObject ammoPickUpPrefab;
+		private Sprite sprite;
 		[Tooltip("Projectile prefab for this weapon.")]
 		[SerializeField]
 		private GameObject projectilePrefab;
@@ -35,9 +32,7 @@ namespace DLSU.SpacePirates.WeaponSystem.Data
 			new IntRange(10, 20)
 		};
 
-		public GameObject PickUpPrefab => pickUpPrefab;
-
-		public GameObject AmmoPickUpPrefab => ammoPickUpPrefab;
+		public Sprite Sprite => sprite;
 
 		public GameObject ProjectilePrefab => projectilePrefab;
 
