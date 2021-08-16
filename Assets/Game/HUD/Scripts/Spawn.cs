@@ -23,6 +23,7 @@ public class Spawn : MonoBehaviour
         spawn.Add(new AsteroidSpawn());
         spawn.Add(new BlackholeSpawn());
         spawn.Add(new EnemySpawn());
+        spawn.Add(new EnemyMineSpawn());
         StartCoroutine(SpeedUpdate());
         StartCoroutine(SpawnUpdate());
     }
