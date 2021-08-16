@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce379c47b50f6a045a78a866e874b2ed, type: 3}
+  m_Name: DefaultPlayerWeapon
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 11fbf174b2cab5f4692a821ff7cb2392, type: 3}
+  projectilePrefab: {fileID: 3549429487722558511, guid: 2d890953719857146860c4e68ea5b1ef,
+    type: 3}
+  unlimitedAmmo: 1
+  initialAmmoRanges:
+  - min: 20
+    max: 30
+  ammoRanges:
+  - min: 10
+    max: 20
