@@ -15,7 +15,9 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: d02dc8a25bf466b44b4214de61c0826a, type: 3}
   projectilePrefab: {fileID: 3549429487722558511, guid: 4bc99e9444064a640b7eae951d1bda00,
     type: 3}
+  shipBarrelSprite: {fileID: 0}
   unlimitedAmmo: 0
+  fireRate: 1
   initialAmmoRanges:
   - min: 20
     max: 30
