@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 943337970315896725}
   - component: {fileID: 5776598680739971936}
   - component: {fileID: 1129857079084611536}
+  - component: {fileID: 6230135206761991813}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Obstacle
@@ -101,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8674643694506609367}
-  speed: 0
+  speed: 0.5
 --- !u!50 &8674643694506609367
 Rigidbody2D:
   serializedVersion: 4
@@ -285,3 +286,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6230135206761991813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6212950485000574065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079e4d8f0c65ee343ab50ab41013f0c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeEnemyDeath: {fileID: 11400000, guid: 0d52f4c9d8ba5ab4fb669fac61828cef, type: 2}
