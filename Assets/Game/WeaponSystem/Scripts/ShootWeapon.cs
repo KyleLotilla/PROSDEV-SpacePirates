@@ -1,4 +1,3 @@
-using DLSU.SpacePirates.WeaponSystem.ScriptableObjects;
 using UnityEngine;
 
 namespace DLSU.SpacePirates.WeaponSystem

@@ -1,7 +1,7 @@
 using DLSU.SpacePirates.WeaponSystem.Utilities;
 using UnityEngine;
 
-namespace DLSU.SpacePirates.WeaponSystem.ScriptableObjects
+namespace DLSU.SpacePirates.WeaponSystem
 {
 	[CreateAssetMenu(
 		fileName = "Weapon",

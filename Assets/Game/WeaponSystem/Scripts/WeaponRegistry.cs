@@ -1,7 +1,6 @@
-using DLSU.SpacePirates.WeaponSystem.ScriptableObjects;
 using System;
 
-namespace DLSU.SpacePirates.WeaponSystem.Utilities
+namespace DLSU.SpacePirates.WeaponSystem
 {
 	/// <summary>
 	/// A ID-Weapon pair.

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace DLSU.SpacePirates.WeaponSystem.ScriptableObjects
+namespace DLSU.SpacePirates.WeaponSystem
 {
 	[CreateAssetMenu(
 		fileName = "WeaponDatabase",
