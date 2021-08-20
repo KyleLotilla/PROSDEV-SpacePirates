@@ -1,6 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-public interface IGameEventListener
+
+namespace DLSU.SpacePirates.Util
 {
-    void OnEventRaised();
+    public interface IGameEventListener
+    {
+        void OnEventRaised();
+    }
 }
+

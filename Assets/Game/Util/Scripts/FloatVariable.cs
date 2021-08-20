@@ -2,26 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/FloatVariable")]
-public class FloatVariable : ScriptableObject
+namespace DLSU.SpacePirates.Util
 {
-    public float defaultValue;
-    [SerializeField]
-    private float currentValue;
-    public float Value
+    [CreateAssetMenu(menuName = "ScriptableObjects/FloatVariable")]
+    public class FloatVariable : ScriptableObject
     {
-        get
+        public float defaultValue;
+        [SerializeField]
+        private float currentValue;
+        public float Value
         {
-            return currentValue;
+            get
+            {
+                return currentValue;
+            }
+            set
+            {
+                currentValue = value;
+            }
         }
-        set
-        {
-            currentValue = value;
-        }
-    }
 
-    private void OnEnable()
-    {
-        currentValue = defaultValue;
+        private void OnEnable()
+        {
+            currentValue = defaultValue;
+        }
     }
 }
+

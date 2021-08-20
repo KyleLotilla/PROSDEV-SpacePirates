@@ -2,26 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/IntVariable")]
-public class IntVariable : ScriptableObject
+namespace DLSU.SpacePirates.Util
 {
-    public int defaultValue;
-    [SerializeField]
-    private int currentValue;
-    public int Value
+    [CreateAssetMenu(menuName = "ScriptableObjects/IntVariable")]
+    public class IntVariable : ScriptableObject
     {
-        get
+        public int defaultValue;
+        [SerializeField]
+        private int currentValue;
+        public int Value
         {
-            return currentValue;
+            get
+            {
+                return currentValue;
+            }
+            set
+            {
+                currentValue = value;
+            }
         }
-        set
-        {
-            currentValue = value;
-        }
-    }
 
-    private void OnEnable()
-    {
-        currentValue = defaultValue;
+        private void OnEnable()
+        {
+            currentValue = defaultValue;
+        }
     }
 }
+

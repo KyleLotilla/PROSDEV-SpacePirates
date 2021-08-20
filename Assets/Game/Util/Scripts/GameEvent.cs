@@ -2,31 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/GameEvent")]
-public class GameEvent : ScriptableObject
+namespace DLSU.SpacePirates.Util
 {
-    private List<IGameEventListener> listeners;
-
-    private void OnEnable()
+    [CreateAssetMenu(menuName = "ScriptableObjects/GameEvent")]
+    public class GameEvent : ScriptableObject
     {
-        listeners = new List<IGameEventListener>();
-    }
+        private List<IGameEventListener> listeners;
 
-    public void Raise()
-    {
-        for (int i = listeners.Count - 1; i >= 0; i--)
+        private void OnEnable()
         {
-            listeners[i].OnEventRaised();
+            listeners = new List<IGameEventListener>();
+        }
+
+        public void Raise()
+        {
+            for (int i = listeners.Count - 1; i >= 0; i--)
+            {
+                listeners[i].OnEventRaised();
+            }
+        }
+
+        public void RegisterListener(IGameEventListener gameEventListener)
+        {
+            listeners.Add(gameEventListener);
+        }
+
+        public void UnregisterListener(IGameEventListener gameEventListener)
+        {
+            listeners.Remove(gameEventListener);
         }
     }
 
-    public void RegisterListener(IGameEventListener gameEventListener)
-    {
-        listeners.Add(gameEventListener);
-    }
-
-    public void UnregisterListener(IGameEventListener gameEventListener)
-    {
-        listeners.Remove(gameEventListener);
-    }
 }
