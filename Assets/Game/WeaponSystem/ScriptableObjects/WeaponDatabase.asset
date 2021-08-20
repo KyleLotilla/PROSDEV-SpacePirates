@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c6228365d110334bb7c98c71ed24e2d, type: 3}
   m_Name: WeaponDatabase
   m_EditorClassIdentifier: 
-  registries: []
+  registries:
+  - id: 0
+    weapon: {fileID: 11400000, guid: 12d7f32c5d047ad4c927b85f146ad62c, type: 2}
   weaponPickUpPrefab: {fileID: 0}
-  defaultPlayerWeapon: {fileID: 0}
+  defaultPlayerWeapon: {fileID: 11400000, guid: 12d7f32c5d047ad4c927b85f146ad62c,
+    type: 2}
