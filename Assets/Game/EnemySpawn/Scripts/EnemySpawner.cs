@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DLSU.SpacePirates.Level;
+using DLSU.SpacePirates.Util;
 
 namespace DLSU.SpacePirates.EnemySpawn
 {

@@ -3,25 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GameEventListener : MonoBehaviour, IGameEventListener
+namespace DLSU.SpacePirates.Util
 {
-    [SerializeField]
-    private GameEvent gameEvent;
-    [SerializeField]
-    private UnityEvent response;
-
-    private void OnEnable()
+    public class GameEventListener : MonoBehaviour, IGameEventListener
     {
-        gameEvent.RegisterListener(this);
-    }
+        [SerializeField]
+        private GameEvent gameEvent;
+        [SerializeField]
+        private UnityEvent response;
 
-    private void OnDisable()
-    {
-        gameEvent.UnregisterListener(this);
-    }
+        private void OnEnable()
+        {
+            gameEvent.RegisterListener(this);
+        }
 
-    public void OnEventRaised()
-    {
-        response.Invoke();
+        private void OnDisable()
+        {
+            gameEvent.UnregisterListener(this);
+        }
+
+        public void OnEventRaised()
+        {
+            response.Invoke();
+        }
     }
 }
+
