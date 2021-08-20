@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 876286404105053798}
   - component: {fileID: 3906069640069869333}
   m_Layer: 0
-  m_Name: player_projectile_0
+  m_Name: PeaShooterProjectile
   m_TagString: PlayerLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,6 +50,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -61,6 +62,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -142,7 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c5381404a649e459bea9b669e4e448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laser: {fileID: 876286404105053798}
+  projectileRigidbody: {fileID: 876286404105053798}
+  velocity: {x: 5, y: 0}
 --- !u!50 &876286404105053798
 Rigidbody2D:
   serializedVersion: 4

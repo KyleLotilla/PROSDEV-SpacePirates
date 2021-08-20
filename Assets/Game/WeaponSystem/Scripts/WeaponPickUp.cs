@@ -1,7 +1,6 @@
-using DLSU.SpacePirates.WeaponSystem.ScriptableObjects;
 using UnityEngine;
 
-namespace DLSU.SpacePirates.WeaponSystem.Interfaces
+namespace DLSU.SpacePirates.WeaponSystem
 {
 	/// <summary>
 	/// A weapon that can be picked up on collision.
