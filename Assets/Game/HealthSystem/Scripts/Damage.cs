@@ -2,28 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Damage : MonoBehaviour
+namespace DLSU.SpacePirates.HealthSystem
 {
-    [SerializeField]
-    private int damage;
-    // Start is called before the first frame update
-    void Start()
+    public class Damage : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Health health = collision.gameObject.GetComponent<Health>();
-        if (health != null)
+        [SerializeField]
+        private int damage;
+        // Start is called before the first frame update
+        void Start()
         {
-            health.TakeDamage(damage);
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            Health health = collision.gameObject.GetComponent<Health>();
+            if (health != null)
+            {
+                health.TakeDamage(damage);
+            }
         }
     }
 }
+

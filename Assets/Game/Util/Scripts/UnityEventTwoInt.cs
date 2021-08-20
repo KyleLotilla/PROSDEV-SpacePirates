@@ -4,8 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[Serializable]
-public class UnityEventTwoInt : UnityEvent<int, int>
+namespace DLSU.SpacePirates.Util
 {
+    [Serializable]
+    public class UnityEventTwoInt : UnityEvent<int, int>
+    {
 
+    }
 }
+

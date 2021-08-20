@@ -2,45 +2,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using DLSU.SpacePirates.Util;
 
-public class Health : MonoBehaviour
+namespace DLSU.SpacePirates.HealthSystem
 {
-    [SerializeField] 
-    private int maxHealth;
-    [SerializeField] 
-    private int currentHealth;
-    [SerializeField]
-    private UnityEventTwoInt onHealthChanged;
-    [SerializeField]
-    private UnityEvent onDeath;
-
-    private void Start()
+    public class Health : MonoBehaviour
     {
-        currentHealth = maxHealth;
-        onHealthChanged.Invoke(currentHealth, currentHealth);
-    }
+        [SerializeField]
+        private int maxHealth;
+        [SerializeField]
+        private int currentHealth;
+        [SerializeField]
+        private UnityEventTwoInt onHealthChanged;
+        [SerializeField]
+        private UnityEvent onDeath;
 
-    private void Update()
-    {
-
-    }
-
-    public void TakeDamage(int damage)
-    {
-        int oldHealth = currentHealth;
-        currentHealth = Mathf.Max(currentHealth - damage, 0);
-        onHealthChanged.Invoke(oldHealth, currentHealth);
-        if (currentHealth <= 0)
+        private void Start()
         {
-            onDeath.Invoke();
+            currentHealth = maxHealth;
+            onHealthChanged.Invoke(currentHealth, currentHealth);
         }
-    }
 
-    public void Heal(int heal)
-    {
-        int oldHealth = currentHealth;
-        currentHealth += Mathf.Min(currentHealth + heal, maxHealth);
-        onHealthChanged.Invoke(oldHealth, currentHealth);
-    }
+        private void Update()
+        {
 
+        }
+
+        public void TakeDamage(int damage)
+        {
+            int oldHealth = currentHealth;
+            currentHealth = Mathf.Max(currentHealth - damage, 0);
+            onHealthChanged.Invoke(oldHealth, currentHealth);
+            if (currentHealth <= 0)
+            {
+                onDeath.Invoke();
+            }
+        }
+
+        public void Heal(int heal)
+        {
+            int oldHealth = currentHealth;
+            currentHealth += Mathf.Min(currentHealth + heal, maxHealth);
+            onHealthChanged.Invoke(oldHealth, currentHealth);
+        }
+
+    }
 }
+
