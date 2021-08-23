@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class RigidMovement : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    private float x;
-    private float y;
+    [SerializeField]
+    private Rigidbody2D rb;
+    [SerializeField]
+    private Vector2 speed;
 
     void Update()
     {
-        rb.velocity = (new Vector2(Input.GetAxisRaw("Horizontal") * 7f, Input.GetAxisRaw("Vertical") * 7f));
+        rb.velocity = (new Vector2(Input.GetAxisRaw("Horizontal") * speed.x, Input.GetAxisRaw("Vertical") * speed.y));
     }
 }

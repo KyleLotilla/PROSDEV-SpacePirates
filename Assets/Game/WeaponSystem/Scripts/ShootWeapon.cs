@@ -74,6 +74,11 @@ namespace DLSU.SpacePirates.WeaponSystem
 			Equipment.ammo <= 0 &&
 			(Weapon == null || !Weapon.UnlimitedAmmo);
 
+        private void Start()
+        {
+			Weapon = database.DefaultPlayerWeapon;
+		}
+
 		private void Update()
 		{
 			if (cooldown > 0f)

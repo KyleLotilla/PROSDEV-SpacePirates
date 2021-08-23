@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2ecc1099a8d4604e89d7f19f5ff97b8, type: 3}
-  m_Name: PlayerWeaponEquipment
+  m_Script: {fileID: 11500000, guid: 58de84f54e3b3b74b8dd4235629f434c, type: 3}
+  m_Name: PlayerDeath
   m_EditorClassIdentifier: 
-  ammo: 27
-  equippedWeapon: {fileID: 11400000, guid: 097feb634517cee40a55df493cc2ab0f, type: 2}

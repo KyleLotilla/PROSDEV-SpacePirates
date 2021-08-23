@@ -211,10 +211,10 @@ GameObject:
   - component: {fileID: 3405137424371468121}
   - component: {fileID: 3405137424371468122}
   - component: {fileID: 3405137424371468126}
-  - component: {fileID: 3405137424371468120}
-  - component: {fileID: 3405137424371468125}
   - component: {fileID: 3405137424371468127}
   - component: {fileID: 6931944469419858491}
+  - component: {fileID: 2725202568284863349}
+  - component: {fileID: 6147875758294054871}
   m_Layer: 0
   m_Name: Ship New
   m_TagString: Player
@@ -343,6 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3405137424371468121}
+  speed: {x: 7, y: 7}
 --- !u!61 &3405137424371468126
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -369,41 +370,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.49, y: 0.92}
   m_EdgeRadius: 0
---- !u!114 &3405137424371468120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3405137424371468102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba8103af4218b46449af13b3c036208b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  booster: {fileID: 3405137423988183974}
-  movement: {fileID: 3405137424371468122}
-  shoot: {fileID: 0}
-  shipCollider: {fileID: 3405137424371468126}
-  playerBody: {fileID: 3405137424371468121}
-  sound: {fileID: 3405137424371468127}
-  explosionSound: {fileID: 8300000, guid: 914cc035f969ae14a9051e5b28d7d859, type: 3}
-  anim: {fileID: 3405137424371468101}
---- !u!114 &3405137424371468125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3405137424371468102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba7d5afe35608cc46a850676c3761a5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 3405137424371468102}
-  audioSource: {fileID: 3405137424371468127}
-  Panel: {fileID: 0}
 --- !u!82 &3405137424371468127
 AudioSource:
   m_ObjectHideFlags: 0
@@ -518,6 +484,125 @@ MonoBehaviour:
   shipTip: {fileID: 3405137423985021543}
   ignoreAmmo: 0
   useDefaultWeaponOnDepletion: 0
+--- !u!114 &2725202568284863349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3405137424371468102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1908003015eb5454ca19e4e57789de7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 1
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6147875758294054871}
+        m_MethodName: Explode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6147875758294054871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3405137424371468102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3f0dff6c1d40a24abf64be8480b7c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3405137424371468101}
+  explosionSound: {fileID: 8300000, guid: 914cc035f969ae14a9051e5b28d7d859, type: 3}
+  explosionVolume: 0.3
+  destroyOnFinish: 1
+  OnExplosionStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3405137423988183974}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3405137423985021536}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3405137424371468122}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3405137424371468126}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3405137424371468121}
+        m_MethodName: Sleep
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnExplosionFinished:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: f94034597da0a4346a41db18c4ba5013, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8407896263548638936
 GameObject:
   m_ObjectHideFlags: 0

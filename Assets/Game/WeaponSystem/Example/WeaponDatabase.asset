@@ -19,5 +19,5 @@ MonoBehaviour:
     weapon: {fileID: 11400000, guid: b8ed89abf0ac5f44388eb850c66c4066, type: 2}
   weaponPickUpPrefab: {fileID: 4766374452111189386, guid: f6165ed985fcf0f4c8020fca0226ab8d,
     type: 3}
-  defaultPlayerWeapon: {fileID: 11400000, guid: 097feb634517cee40a55df493cc2ab0f,
+  defaultPlayerWeapon: {fileID: 11400000, guid: 12d7f32c5d047ad4c927b85f146ad62c,
     type: 2}

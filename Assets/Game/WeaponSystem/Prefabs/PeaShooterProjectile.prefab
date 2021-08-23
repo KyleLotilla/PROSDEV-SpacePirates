@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6715877763508753110}
   - component: {fileID: 2653843558156649762}
   - component: {fileID: 876286404105053798}
-  - component: {fileID: 3906069640069869333}
   m_Layer: 0
   m_Name: PeaShooterProjectile
   m_TagString: PlayerLaser
@@ -145,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileRigidbody: {fileID: 876286404105053798}
-  velocity: {x: 5, y: 0}
+  velocity: {x: 20, y: 0}
 --- !u!50 &876286404105053798
 Rigidbody2D:
   serializedVersion: 4
@@ -167,17 +166,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3906069640069869333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6671932444758613728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 453a160877df69d4eb0a09cec5b3fddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: {fileID: 0}
-  laser: {fileID: 6671932444758613728}
