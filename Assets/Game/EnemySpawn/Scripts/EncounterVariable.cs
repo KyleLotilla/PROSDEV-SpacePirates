@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DLSU.SpacePirates.Level
+namespace DLSU.SpacePirates.EnemySpawn
 {
-    [CreateAssetMenu(menuName = "ScriptableObjects/LevelVariable")]
-    public class LevelVariable : ScriptableObject
+    [CreateAssetMenu(menuName = "ScriptableObjects/EncounterVariable")]
+    public class EncounterVariable : ScriptableObject
     {
         [SerializeField]
-        private Level defaultValue;
+        private Encounter defaultValue;
         [SerializeField]
-        private Level currentValue;
-        public Level Value
+        private Encounter currentValue;
+        public Encounter Value
         {
             get
             {
@@ -32,4 +32,3 @@ namespace DLSU.SpacePirates.Level
         }
     }
 }
-
