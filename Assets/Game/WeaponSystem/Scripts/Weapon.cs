@@ -1,7 +1,7 @@
 using DLSU.SpacePirates.WeaponSystem.Utilities;
 using UnityEngine;
 
-namespace DLSU.SpacePirates.WeaponSystem.ScriptableObjects
+namespace DLSU.SpacePirates.WeaponSystem
 {
 	[CreateAssetMenu(
 		fileName = "Weapon",
@@ -16,9 +16,16 @@ namespace DLSU.SpacePirates.WeaponSystem.ScriptableObjects
 		[Tooltip("Projectile prefab for this weapon.")]
 		[SerializeField]
 		private GameObject projectilePrefab;
+		[Tooltip("Sprite for this weapon's ship barrel.")]
+		[SerializeField]
+		private Sprite shipBarrelSprite;
 		[Tooltip("If this weapon has unlimited ammo.")]
 		[SerializeField]
 		private bool unlimitedAmmo = false;
+		[Tooltip("Cooldown in-between shots.")]
+		[Min(0f)]
+		[SerializeField]
+		private float fireRate;
 		[Tooltip("Initial ammo on weapon pick-up.")]
 		[SerializeField]
 		private IntRange[] initialAmmoRanges = new IntRange[]
@@ -36,7 +43,11 @@ namespace DLSU.SpacePirates.WeaponSystem.ScriptableObjects
 
 		public GameObject ProjectilePrefab => projectilePrefab;
 
+		public Sprite ShipBarrelSprite => shipBarrelSprite;
+
 		public bool UnlimitedAmmo => unlimitedAmmo;
+
+		public float FireRate => fireRate;
 
 		/// <summary>
 		/// Pick a random number from one of the initial ammo ranges.

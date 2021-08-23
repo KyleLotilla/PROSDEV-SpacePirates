@@ -1,5 +1,3 @@
-using DLSU.SpacePirates.WeaponSystem.Interfaces;
-using DLSU.SpacePirates.WeaponSystem.ScriptableObjects;
 using UnityEditor;
 using UnityEngine;
 

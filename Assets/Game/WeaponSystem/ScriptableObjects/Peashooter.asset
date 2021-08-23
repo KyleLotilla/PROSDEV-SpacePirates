@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce379c47b50f6a045a78a866e874b2ed, type: 3}
-  m_Name: Gun 2
+  m_Name: Peashooter
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: d02dc8a25bf466b44b4214de61c0826a, type: 3}
-  projectilePrefab: {fileID: 3549429487722558511, guid: 4bc99e9444064a640b7eae951d1bda00,
+  sprite: {fileID: 0}
+  projectilePrefab: {fileID: 6671932444758613728, guid: d3e019caf205c304daa41d3db0b5553d,
     type: 3}
   shipBarrelSprite: {fileID: 0}
   unlimitedAmmo: 0
-  fireRate: 1
+  fireRate: 0
   initialAmmoRanges:
   - min: 20
     max: 30
