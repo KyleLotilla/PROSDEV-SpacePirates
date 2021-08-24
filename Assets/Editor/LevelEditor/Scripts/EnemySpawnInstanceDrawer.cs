@@ -44,8 +44,8 @@ namespace DLSU.SpacePirates.Editor.LevelEditor
                 enemyID.intValue = EditorGUI.Popup(rects[0], new GUIContent("Enemy"), enemyID.intValue, BuildEnemyGUIContent());
                 spawnDelayTime.floatValue = EditorGUI.FloatField(rects[1], "Spawn Time", spawnDelayTime.floatValue);
                 spawnPosition.vector2Value = EditorGUI.Vector2Field(rects[2], "Position", spawnPosition.vector2Value);
-                Vector2 eulerRotation = spawnRotation.quaternionValue.eulerAngles;
-                spawnRotation.quaternionValue = Quaternion.Euler((Vector3)(EditorGUI.Vector2Field(rects[3], "Rotation", eulerRotation)));
+                Vector3 eulerRotation = spawnRotation.quaternionValue.eulerAngles;
+                spawnRotation.quaternionValue = Quaternion.Euler(new Vector3(0.0f, 0.0f, EditorGUI.FloatField(rects[3], "Rotation", Mathf.Round(eulerRotation.z))));
             }
 
             EditorGUI.EndProperty();
