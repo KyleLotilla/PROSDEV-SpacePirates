@@ -10,6 +10,14 @@ namespace DLSU.SpacePirates.BossSystem
         [SerializeField]
         private List<GameObject> bossPrefabs;
 
+        public IEnumerable<GameObject> Bosses
+        {
+            get
+            {
+                return bossPrefabs;
+            }
+        }
+
         public GameObject GetBoss(int id)
         {
             Debug.Assert(id >= 0 && id < bossPrefabs.Count, "BossDatabase: ID out of bound");

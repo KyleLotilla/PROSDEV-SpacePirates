@@ -304,13 +304,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9084863961635695513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3f6fef8df21eb74da925b778a2bc095, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e125170d5a9cb844949338af12d18d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   topBound: 1.7
   buttomBound: -1.7
   shipRigidbody: {fileID: 9084863961635695490}
-  speed: 2
+  speed: 5
 --- !u!114 &9084863961635695518
 MonoBehaviour:
   m_ObjectHideFlags: 0
