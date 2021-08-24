@@ -27,6 +27,11 @@ namespace DLSU.SpacePirates.HealthSystem
             {
                 health.TakeDamage(damage);
             }
+            HealthHitBox healthHitBox = collision.gameObject.GetComponent<HealthHitBox>();
+            if (healthHitBox != null)
+            {
+                healthHitBox.TakeDamage(damage);
+            }
         }
     }
 }

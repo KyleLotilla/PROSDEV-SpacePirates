@@ -10,17 +10,53 @@ namespace DLSU.SpacePirates.HealthSystem
     {
         [SerializeField]
         private int maxHealth;
+        public int MaxHealth
+        {
+            get
+            {
+                return maxHealth;
+            }
+            set
+            {
+                maxHealth = value;
+            }
+        }
         [SerializeField]
         private int currentHealth;
+        public int CurrentHealth
+        {
+            get
+            {
+                return currentHealth;
+            }
+            set
+            {
+                currentHealth = value;
+            }
+        }
         [SerializeField]
         private UnityEventTwoInt onHealthChanged;
+        public UnityEventTwoInt OnHealthChanged
+        {
+            get
+            {
+                return onHealthChanged;
+            }
+        }
         [SerializeField]
         private UnityEvent onDeath;
+        public UnityEvent OnDeath
+        {
+            get
+            {
+                return onDeath;
+            }
+        }
 
         private void Start()
         {
             currentHealth = maxHealth;
-            onHealthChanged.Invoke(currentHealth, currentHealth);
+            onHealthChanged?.Invoke(currentHealth, currentHealth);
         }
 
         private void Update()
@@ -32,10 +68,10 @@ namespace DLSU.SpacePirates.HealthSystem
         {
             int oldHealth = currentHealth;
             currentHealth = Mathf.Max(currentHealth - damage, 0);
-            onHealthChanged.Invoke(oldHealth, currentHealth);
+            onHealthChanged?.Invoke(oldHealth, currentHealth);
             if (currentHealth <= 0)
             {
-                onDeath.Invoke();
+                onDeath?.Invoke();
             }
         }
 
@@ -43,7 +79,7 @@ namespace DLSU.SpacePirates.HealthSystem
         {
             int oldHealth = currentHealth;
             currentHealth += Mathf.Min(currentHealth + heal, maxHealth);
-            onHealthChanged.Invoke(oldHealth, currentHealth);
+            onHealthChanged?.Invoke(oldHealth, currentHealth);
         }
 
     }
