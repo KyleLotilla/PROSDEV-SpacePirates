@@ -7,63 +7,16 @@ namespace DLSU.SpacePirates.EnemySpawn
     public class EnemySpawnInstance
     {
         [SerializeField]
-        private int enenmyID;
-        public int EnemyID
-        {
-            get
-            {
-                return enenmyID;
-            }
-            set
-            {
-                enenmyID = value;
-            }
-        }
-
+        public int enemyID;
         [SerializeField]
-        private float spawnTime;
-
-        public float SpawnTime
-        {
-            get
-            {
-                return spawnTime;
-            }
-            set
-            {
-                spawnTime = value;
-            }
-        }
-
+        [Tooltip("The time that elpased after the encounter has started when the enemy will spawn. 0 means it will spawn instantly")]
+        public float spawnDelayTime;
         [SerializeField]
-        private float spawnLocationOffsetX;
-
-        public float SpawnLocationOffsetX
-        {
-            get
-            {
-                return spawnLocationOffsetX;
-            }
-            set
-            {
-                spawnLocationOffsetX = value;
-            }
-        }
-
+        [Tooltip("The absolute world position that the enemy will spawn at")]
+        public Vector2 spawnPosition;
         [SerializeField]
-        private float spawnLocationOffsetY;
-
-        public float SpawnLocationOffsetY
-        {
-            get
-            {
-                return spawnLocationOffsetY;
-            }
-            set
-            {
-                spawnLocationOffsetY = value;
-            }
-        }
+        [Tooltip("The rotation that the enemy will spawn with")]
+        public Quaternion spawnRotation;
     }
 }
 

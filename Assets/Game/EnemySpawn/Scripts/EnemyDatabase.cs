@@ -9,6 +9,13 @@ namespace DLSU.SpacePirates.EnemySpawn
     {
         [SerializeField]
         private List<GameObject> enemyPrefabs;
+        public IEnumerable<GameObject> Enemies
+        {
+            get
+            {
+                return enemyPrefabs;
+            }
+        }
 
         public GameObject GetEnemy(int id)
         {
