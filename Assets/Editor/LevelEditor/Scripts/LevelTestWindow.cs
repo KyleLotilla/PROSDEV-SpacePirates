@@ -5,8 +5,7 @@ using UnityEditor;
 using DLSU.SpacePirates.Level;
 using DLSU.SpacePirates.EnemySpawn;
 using UnityEditor.SceneManagement;
-using UnityEngine.SceneManagement;
-using System.Linq;
+using DLSU.SpacePirates.BossSystem;
 
 public class LevelTestWindow : EditorWindow
 {
@@ -15,11 +14,14 @@ public class LevelTestWindow : EditorWindow
     private int encounterSelected = 0;
     private string LEVEL_TEST_SCENE_PATH = "Assets/Editor/LevelEditor/Scenes/LevelTest.unity";
     private string ENCOUNTER_TEST_SCENE_PATH = "Assets/Editor/LevelEditor/Scenes/EncounterTest.unity";
+    private string BOSS_TEST_SCENE_PATH = "Assets/Editor/LevelEditor/Scenes/BossTest.unity";
 
     [SerializeField]
     private LevelVariable testLevel;
     [SerializeField]
     private EncounterVariable testEncounter;
+    [SerializeField]
+    private BossSpawnInstanceVariable testBoss;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +42,7 @@ public class LevelTestWindow : EditorWindow
 
     private void OnGUI()
     {
-        toolbar = GUILayout.Toolbar(toolbar, new string[] { "Level Test", "Encounter Test" });
+        toolbar = GUILayout.Toolbar(toolbar, new string[] { "Level Test", "Encounter Test", "Level Boss Test"});
         if (toolbar == 0)
         {
             ShowLevelTestGUI();
@@ -48,6 +50,10 @@ public class LevelTestWindow : EditorWindow
         else if (toolbar == 1)
         {
             ShowEncounterTestGUI();
+        }
+        else if (toolbar == 2)
+        {
+            ShowBossTestGUI();
         }
     }
 
@@ -122,6 +128,35 @@ public class LevelTestWindow : EditorWindow
         }
         Debug.Assert(LEVEL_TEST_SCENE_PATH.Length > 0, "Encounter Test Scene Path is not set");
         EditorSceneManager.OpenScene(ENCOUNTER_TEST_SCENE_PATH);
+        EditorApplication.isPlaying = true;
+        if (SceneView.sceneViews.Count > 0)
+        {
+            SceneView sceneView = (SceneView)SceneView.sceneViews[0];
+            sceneView.Focus();
+        }
+        Close();
+    }
+
+    private void ShowBossTestGUI()
+    {
+        level = (Level)EditorGUILayout.ObjectField("Level", level, typeof(Level), false);
+        EditorGUI.BeginDisabledGroup(level == null);
+        if (GUILayout.Button("Test Level Boss"))
+        {
+            TestBossLevel();
+        }
+        EditorGUI.EndDisabledGroup();
+    }
+
+    private void TestBossLevel()
+    {
+        testBoss.Value = level.Boss;
+        if (EditorApplication.isPlaying)
+        {
+            EditorApplication.isPlaying = false;
+        }
+        Debug.Assert(LEVEL_TEST_SCENE_PATH.Length > 0, "Boss Test Scene Path is not set");
+        EditorSceneManager.OpenScene(BOSS_TEST_SCENE_PATH);
         EditorApplication.isPlaying = true;
         if (SceneView.sceneViews.Count > 0)
         {

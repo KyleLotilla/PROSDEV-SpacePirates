@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DLSU.SpacePirates.Level;
+using DLSU.SpacePirates.EnemySpawn;
 using DLSU.SpacePirates.Util;
+using DLSU.SpacePirates.BossSystem;
 
-namespace DLSU.SpacePirates.EnemySpawn
+namespace DLSU.SpacePirates.Level
 {
-    public class LevelSpawner : MonoBehaviour
+    public class LevelProgression : MonoBehaviour
     {
         [SerializeField]
         private LevelVariable currentLevel;
@@ -14,6 +15,8 @@ namespace DLSU.SpacePirates.EnemySpawn
         private IntVariable currentEncounterCount;
         [SerializeField]
         private EncounterSpawner encounterSpawner;
+        [SerializeField]
+        private BossSpawner bossSpawner;
         [SerializeField]
         private GameEvent allEncountersFinished;
 
@@ -42,10 +45,9 @@ namespace DLSU.SpacePirates.EnemySpawn
             else
             {
                 allEncountersFinished.Raise();
+                bossSpawner.SpawnBoss(currentLevel.Value.Boss);
             }
         }
-
-        
     }
 }
 
