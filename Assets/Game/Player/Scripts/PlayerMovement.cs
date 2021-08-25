@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+namespace DLSU.SpacePirates.Player
 {
-    [SerializeField]
-    private Rigidbody2D playerRigidBody;
-    [SerializeField]
-    private Vector2 speed;
-
-    void Update()
+    public class PlayerMovement : MonoBehaviour
     {
-        playerRigidBody.velocity = (new Vector2(Input.GetAxisRaw("Horizontal") * speed.x, Input.GetAxisRaw("Vertical") * speed.y));
+        [SerializeField]
+        private Rigidbody2D playerRigidBody;
+        [SerializeField]
+        private Vector2 speed;
+
+        void Update()
+        {
+            playerRigidBody.velocity = (new Vector2(Input.GetAxisRaw("Horizontal") * speed.x, Input.GetAxisRaw("Vertical") * speed.y));
+        }
     }
+
 }

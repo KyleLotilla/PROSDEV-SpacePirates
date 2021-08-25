@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3405137423985021543}
   - component: {fileID: 421900284164012637}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 2725202568284863349}
   - component: {fileID: 6147875758294054871}
   - component: {fileID: 5102378084675482997}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: PlayerShip
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 2319723512927691808}
   - component: {fileID: 73641492887964188}
   - component: {fileID: 8677376901595983774}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: cameraCol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
