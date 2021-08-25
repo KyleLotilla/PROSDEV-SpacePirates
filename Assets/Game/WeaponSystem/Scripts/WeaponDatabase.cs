@@ -19,6 +19,9 @@ namespace DLSU.SpacePirates.WeaponSystem
 		[Tooltip("The prefab that will be used for weapon pick-ups.")]
 		private GameObject weaponPickUpPrefab;
 		[SerializeField]
+		[Tooltip("The ammo box prefab.")]
+		private GameObject ammoBoxPrefab;
+		[SerializeField]
 		[Tooltip("The weapon that the player will receive when " +
 			"their current weapon is out of ammo. " +
 			"Weapons without any ammo is discarded. " +
@@ -27,6 +30,8 @@ namespace DLSU.SpacePirates.WeaponSystem
 		private Weapon defaultPlayerWeapon;
 
 		public GameObject WeaponPickUpPrefab => weaponPickUpPrefab;
+
+		public GameObject AmmoBoxPrefab => ammoBoxPrefab;
 
 		public Weapon DefaultPlayerWeapon => defaultPlayerWeapon;
 

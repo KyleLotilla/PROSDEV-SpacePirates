@@ -12,8 +12,7 @@ namespace DLSU.SpacePirates.WeaponSystem
 	{
 		[SerializeField]
 		private Weapon weapon;
-		[SerializeField]
-		private SpriteRenderer icon;
+		private SpriteRenderer iconRenderer;
 
 		public Weapon Weapon
 		{
@@ -21,13 +20,18 @@ namespace DLSU.SpacePirates.WeaponSystem
 			set
 			{
 				weapon = value;
-				icon.sprite = weapon.Sprite;
+
+				if (weapon != null)
+					iconRenderer.sprite = weapon.Sprite;
 			}
 		}
 
 		private void Awake()
 		{
-			icon = GetComponent<SpriteRenderer>();
+			iconRenderer = GetComponent<SpriteRenderer>();
+
+			if (weapon != null)
+				iconRenderer.sprite = weapon.Sprite;
 		}
 
 		private void OnTriggerEnter2D(Collider2D collision)
