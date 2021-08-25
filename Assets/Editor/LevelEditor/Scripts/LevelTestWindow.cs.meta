@@ -7,6 +7,7 @@ MonoImporter:
   - m_ViewDataDictionary: {instanceID: 0}
   - testLevel: {fileID: 11400000, guid: 6f1f5a80e51fe82459c85cbfd43f2d88, type: 2}
   - testEncounter: {fileID: 11400000, guid: e6dc882e568a3eb44b458a6b92ae3e11, type: 2}
+  - testBoss: {fileID: 11400000, guid: 82780ac368ac81f418d01c699cf6ed2a, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
