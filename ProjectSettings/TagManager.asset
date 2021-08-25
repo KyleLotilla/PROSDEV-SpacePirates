@@ -19,8 +19,8 @@ TagManager:
   - 
   - 
   - CameraCollision
-  - 
-  - 
+  - EnemyProjectile
+  - Enemy
   - 
   - 
   - 
