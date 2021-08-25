@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3549429487722558509}
   - component: {fileID: 3549429487722558508}
   - component: {fileID: 6116750095973117887}
+  - component: {fileID: 1060635038170629950}
+  - component: {fileID: 5574553327640104891}
   m_Layer: 0
   m_Name: DefaultPlayerWeapon Projectile
   m_TagString: Untagged
@@ -94,3 +96,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a6a852fc79ebd48bca7113975ac6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1060635038170629950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3549429487722558511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc3b472907e4be4abf24d63a337e130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+--- !u!58 &5574553327640104891
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3549429487722558511}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0039056838, y: -0.003906667}
+  serializedVersion: 2
+  m_Radius: 0.23824164

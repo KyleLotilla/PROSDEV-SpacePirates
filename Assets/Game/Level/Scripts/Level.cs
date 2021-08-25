@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DLSU.SpacePirates.EnemySpawn;
+using DLSU.SpacePirates.BossSystem;
 
 namespace DLSU.SpacePirates.Level
 {
@@ -28,6 +29,21 @@ namespace DLSU.SpacePirates.Level
             get
             {
                 return encounters.Count;
+            }
+        }
+
+        [SerializeField]
+        private BossSpawnInstance boss;
+
+        public BossSpawnInstance Boss
+        {
+            get
+            {
+                return boss;
+            }
+            set
+            {
+                boss = value;
             }
         }
     }

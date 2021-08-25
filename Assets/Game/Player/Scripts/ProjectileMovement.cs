@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PeaShooterProjectileMovement : MonoBehaviour
+public class ProjectileMovement : MonoBehaviour
 {
     [SerializeField]
     private Rigidbody2D projectileRigidbody;
