@@ -20,8 +20,8 @@ public class Spawn : MonoBehaviour
         top = 3.87f;
         bottom = -4.22f;
         spawn = new List<IObstacleSpawn>();
-        spawn.Add(new AsteroidSpawn());
-        spawn.Add(new BlackholeSpawn());
+        //spawn.Add(new AsteroidSpawn());
+        //spawn.Add(new BlackholeSpawn());
         spawn.Add(new EnemySpawn());
         StartCoroutine(SpeedUpdate());
         StartCoroutine(SpawnUpdate());
