@@ -12,7 +12,7 @@ namespace DLSU.SpacePirates.WeaponSystem
 		private WeaponEquipment equipment;
 		[Tooltip("The weapon's ship barrel sprite renderer.")]
 		[SerializeField]
-		private SpriteRenderer shipBarrelRenderer;
+		private ShipBarrel shipBarrel;
 		[Tooltip("Where the projectile will be spawned.")]
 		[SerializeField]
 		private Transform shipTip;
@@ -40,12 +40,12 @@ namespace DLSU.SpacePirates.WeaponSystem
 		/// <summary>
 		/// Updates the ship's barrel sprite.
 		/// </summary>
-		public Sprite ShipBarrel
+		public WeaponBarrel WeaponBarrel
 		{
 			set
 			{
-				if (shipBarrelRenderer != null)
-					shipBarrelRenderer.sprite = value;
+				if (shipBarrel != null)
+					shipBarrel.WeaponBarrel = value;
 			}
 		}
 
@@ -60,7 +60,7 @@ namespace DLSU.SpacePirates.WeaponSystem
 			set
 			{
 				equipment.EquippedWeapon = value;
-				ShipBarrel = value.ShipBarrelSprite;
+				WeaponBarrel = value.Barrel;
 			}
 		}
 
@@ -73,6 +73,11 @@ namespace DLSU.SpacePirates.WeaponSystem
 		public bool ShouldDiscard =>
 			Equipment.ammo <= 0 &&
 			(Weapon == null || !Weapon.UnlimitedAmmo);
+
+        private void Start()
+        {
+			Weapon = database.DefaultPlayerWeapon;
+		}
 
 		private void Update()
 		{
@@ -129,6 +134,11 @@ namespace DLSU.SpacePirates.WeaponSystem
 				origin,
 				Quaternion.Euler(0f, 0f, Mathf.Atan2(direction.y, direction.x))
 			);
+
+			if (shipBarrel != null)
+            {
+				shipBarrel.ShootBarrel();
+            }
 
 			return @object;
 		}

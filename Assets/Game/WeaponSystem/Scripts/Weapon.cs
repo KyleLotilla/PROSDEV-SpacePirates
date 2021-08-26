@@ -18,7 +18,7 @@ namespace DLSU.SpacePirates.WeaponSystem
 		private GameObject projectilePrefab;
 		[Tooltip("Sprite for this weapon's ship barrel.")]
 		[SerializeField]
-		private Sprite shipBarrelSprite;
+		private WeaponBarrel barrel;
 		[Tooltip("If this weapon has unlimited ammo.")]
 		[SerializeField]
 		private bool unlimitedAmmo = false;
@@ -43,7 +43,7 @@ namespace DLSU.SpacePirates.WeaponSystem
 
 		public GameObject ProjectilePrefab => projectilePrefab;
 
-		public Sprite ShipBarrelSprite => shipBarrelSprite;
+		public WeaponBarrel Barrel => barrel;
 
 		public bool UnlimitedAmmo => unlimitedAmmo;
 
