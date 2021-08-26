@@ -16,9 +16,9 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6671932444758613728, guid: d3e019caf205c304daa41d3db0b5553d,
     type: 3}
   barrel:
-    animatorController: {fileID: 9100000, guid: 8711e0ceb1624d543b51d7cb4e698b3f,
+    animatorController: {fileID: 9100000, guid: 166efb67c03d902408485e8a6b3b7a8e,
       type: 2}
-    positionOffset: {x: 0.004, y: -0.024}
+    positionOffset: {x: 0, y: 0}
   unlimitedAmmo: 1
   fireRate: 0.2
   initialAmmoRanges:
