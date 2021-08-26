@@ -11,7 +11,7 @@ namespace DLSU.SpacePirates.Editor.LevelEditor
     public class EnemySpawnInstanceDrawer : PropertyDrawer
     {
         private string ENEMY_DATABASE_PATH = "Assets/Game/EnemySpawn/ScriptableObjects/EnemyDatabase.asset";
-        private int TOTAL_LINES = 4;
+        private int TOTAL_LINES = 5;
 
         private EnemyDatabase enemyDatabase;
 
@@ -45,7 +45,9 @@ namespace DLSU.SpacePirates.Editor.LevelEditor
                 spawnDelayTime.floatValue = EditorGUI.FloatField(rects[1], "Spawn Time", spawnDelayTime.floatValue);
                 spawnPosition.vector2Value = EditorGUI.Vector2Field(rects[2], "Position", spawnPosition.vector2Value);
                 Vector3 eulerRotation = spawnRotation.quaternionValue.eulerAngles;
-                spawnRotation.quaternionValue = Quaternion.Euler(new Vector3(0.0f, 0.0f, EditorGUI.FloatField(rects[3], "Rotation", Mathf.Round(eulerRotation.z))));
+                eulerRotation.y = EditorGUI.FloatField(rects[3], "Rotation Y", Mathf.Round(eulerRotation.y));
+                eulerRotation.z = EditorGUI.FloatField(rects[4], "Rotation Z", Mathf.Round(eulerRotation.z));
+                spawnRotation.quaternionValue = Quaternion.Euler(eulerRotation);
             }
 
             EditorGUI.EndProperty();

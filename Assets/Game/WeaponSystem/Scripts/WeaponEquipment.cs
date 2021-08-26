@@ -31,5 +31,11 @@ namespace DLSU.SpacePirates.WeaponSystem
 
 		public void AddRandomAmmo() =>
 			AddAmmo(equippedWeapon.RandomAmmo);
-	}
+
+        private void OnEnable()
+        {
+			equippedWeapon = null;
+			ammo = 0;
+		}
+    }
 }

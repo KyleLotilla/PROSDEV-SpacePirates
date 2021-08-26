@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce379c47b50f6a045a78a866e874b2ed, type: 3}
-  m_Name: Gun 2
+  m_Name: RocketLauncher
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: d02dc8a25bf466b44b4214de61c0826a, type: 3}
-  projectilePrefab: {fileID: 3549429487722558511, guid: 4bc99e9444064a640b7eae951d1bda00,
+  sprite: {fileID: 0}
+  projectilePrefab: {fileID: 1490959407824652617, guid: 459a6a972ba415a4b92dc308ef66ee1b,
     type: 3}
-  shipBarrelSprite: {fileID: 0}
+  barrel:
+    animatorController: {fileID: 9100000, guid: 8711e0ceb1624d543b51d7cb4e698b3f,
+      type: 2}
+    positionOffset: {x: 0.004, y: -0.024}
   unlimitedAmmo: 0
   fireRate: 1
   initialAmmoRanges:
