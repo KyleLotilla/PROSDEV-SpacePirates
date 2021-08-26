@@ -396,8 +396,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9c04cc63c99d14a8035843e5edc543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  database: {fileID: 11400000, guid: 611a9186d729453419a5589500039449, type: 2}
-  equipment: {fileID: 11400000, guid: 700e8d4b9b39fab419aef937e999c3fb, type: 2}
+  database: {fileID: 11400000, guid: fa10c0428bec0cf469296b0bc8432337, type: 2}
+  equipment: {fileID: 11400000, guid: 59884e593b4a9484696f1ee9226ffd46, type: 2}
   shipBarrel: {fileID: 8111618429958481011}
   shipTip: {fileID: 3405137423985021543}
   ignoreAmmo: 0

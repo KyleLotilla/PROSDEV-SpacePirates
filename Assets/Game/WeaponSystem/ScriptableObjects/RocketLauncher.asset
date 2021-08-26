@@ -19,7 +19,7 @@ MonoBehaviour:
     animatorController: {fileID: 9100000, guid: 8711e0ceb1624d543b51d7cb4e698b3f,
       type: 2}
     positionOffset: {x: 0.004, y: -0.024}
-  unlimitedAmmo: 1
+  unlimitedAmmo: 0
   fireRate: 1
   initialAmmoRanges:
   - min: 20
