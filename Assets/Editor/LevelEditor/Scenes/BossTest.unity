@@ -1692,7 +1692,7 @@ GameObject:
   - component: {fileID: 708064036}
   - component: {fileID: 708064035}
   - component: {fileID: 708064034}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: deadZone (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2038,7 +2038,7 @@ GameObject:
   - component: {fileID: 1249130792}
   - component: {fileID: 1249130791}
   - component: {fileID: 1249130793}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: deadZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
