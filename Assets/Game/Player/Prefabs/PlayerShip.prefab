@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3405137423985021543}
   - component: {fileID: 421900284164012637}
+  - component: {fileID: 6305018982963263627}
+  - component: {fileID: 8111618429958481011}
   m_Layer: 11
   m_Name: tip
   m_TagString: Untagged
@@ -70,8 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1098179606456428539, guid: 6a6dc51191b2bbc4095b417fa2fb5091,
-    type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -79,9 +80,41 @@ SpriteRenderer:
   m_Size: {x: 0.14, y: 0.03}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6305018982963263627
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3405137423985021536}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8111618429958481011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3405137423985021536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ce7f923f8e4f845a5aa327a23bd51a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipBarrelAnimator: {fileID: 6305018982963263627}
 --- !u!1 &3405137424371468102
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,7 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   database: {fileID: 11400000, guid: 611a9186d729453419a5589500039449, type: 2}
   equipment: {fileID: 11400000, guid: 700e8d4b9b39fab419aef937e999c3fb, type: 2}
-  shipBarrelRenderer: {fileID: 421900284164012637}
+  shipBarrel: {fileID: 8111618429958481011}
   shipTip: {fileID: 3405137423985021543}
   ignoreAmmo: 0
   useDefaultWeaponOnDepletion: 0
