@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2ecc1099a8d4604e89d7f19f5ff97b8, type: 3}
-  m_Name: WeaponEquipment
+  m_Script: {fileID: 11500000, guid: 58de84f54e3b3b74b8dd4235629f434c, type: 3}
+  m_Name: WeaponChanged
   m_EditorClassIdentifier: 
-  ammo: 0
-  equippedWeapon: {fileID: 0}
-  weaponChanged: {fileID: 11400000, guid: c3c74be80b6ffb645a6b3ae158db1e4e, type: 2}
