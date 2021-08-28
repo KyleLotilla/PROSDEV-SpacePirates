@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraCollision : MonoBehaviour
+namespace DLSU.SpacePirates.Player
 {
-    void Start()
+    public class CameraCollision : MonoBehaviour
     {
-        Physics2D.IgnoreLayerCollision(0, 8);
+        void Start()
+        {
+            Physics2D.IgnoreLayerCollision(0, 8);
+        }
     }
+
 }

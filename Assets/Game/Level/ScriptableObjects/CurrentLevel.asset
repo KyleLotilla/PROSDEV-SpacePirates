@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd52bd08c2f1df74095121b885655ace, type: 3}
   m_Name: CurrentLevel
   m_EditorClassIdentifier: 
+  defaultValue: {fileID: 11400000, guid: fcd21654046cdf4498d9657ce9e64edc, type: 2}
+  currentValue: {fileID: 11400000, guid: fcd21654046cdf4498d9657ce9e64edc, type: 2}

@@ -19,11 +19,11 @@ TagManager:
   - 
   - 
   - CameraCollision
-  - 
-  - 
-  - 
-  - 
-  - 
+  - EnemyProjectile
+  - Enemy
+  - Player
+  - PlayerProjectile
+  - Deadzone
   - 
   - 
   - 

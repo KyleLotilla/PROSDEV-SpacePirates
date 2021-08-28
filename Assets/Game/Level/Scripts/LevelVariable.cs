@@ -8,6 +8,8 @@ namespace DLSU.SpacePirates.Level
     public class LevelVariable : ScriptableObject
     {
         [SerializeField]
+        private Level defaultValue;
+        [SerializeField]
         private Level currentValue;
         public Level Value
         {
@@ -23,7 +25,10 @@ namespace DLSU.SpacePirates.Level
 
         private void OnEnable()
         {
-            currentValue = null;
+            if (currentValue == null)
+            {
+                currentValue = defaultValue;
+            }
         }
     }
 }
