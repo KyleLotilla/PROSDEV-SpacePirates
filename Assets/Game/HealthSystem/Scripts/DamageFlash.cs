@@ -38,7 +38,7 @@ namespace DLSU.SpacePirates.HealthSystem
 
         public void OnHealthChanged(int oldHealth, int newHealth)
         {
-            if (oldHealth > newHealth)
+            if (oldHealth > newHealth && newHealth > 0)
             {
                 spriteRenderer.material.color = flashColor;
                 damaged = true;
