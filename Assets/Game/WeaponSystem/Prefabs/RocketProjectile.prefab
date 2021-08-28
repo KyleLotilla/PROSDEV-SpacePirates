@@ -104,8 +104,8 @@ MonoBehaviour:
   projectileRigidbody: {fileID: 1490959407824652630}
   velocity: {x: 5, y: 0}
   hasAcceleration: 1
-  minSpeed: {x: 1, y: 0}
-  maxSpeed: {x: 20, y: 0}
+  minVelocity: {x: 1, y: 0}
+  maxVelocity: {x: 20, y: 0}
   acceleration: {x: 5, y: 0}
   accelerationRate: 0.4
 --- !u!50 &1490959407824652630

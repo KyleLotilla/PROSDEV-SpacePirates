@@ -16,11 +16,11 @@ MonoBehaviour:
   - initialStrength: 1
     maxStrength: 5
     enemySpawns:
-    - enemyID: 0
+    - enemyID: 1
       spawnDelayTime: 0
-      spawnPosition: {x: 9, y: 0}
+      spawnPosition: {x: 10, y: 0}
       spawnRotation: {x: 0, y: 0, z: 0, w: 1}
-    - enemyID: 0
+    - enemyID: 2
       spawnDelayTime: 3
       spawnPosition: {x: 8.5, y: 4}
       spawnRotation: {x: 0, y: 0, z: 0, w: 1}

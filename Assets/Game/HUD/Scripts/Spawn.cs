@@ -22,7 +22,7 @@ public class Spawn : MonoBehaviour
         spawn = new List<IObstacleSpawn>();
         spawn.Add(new AsteroidSpawn());
         spawn.Add(new BlackholeSpawn());
-        spawn.Add(new EnemySpawn());
+        //spawn.Add(new EnemySpawn());
         StartCoroutine(SpeedUpdate());
         StartCoroutine(SpawnUpdate());
     }
