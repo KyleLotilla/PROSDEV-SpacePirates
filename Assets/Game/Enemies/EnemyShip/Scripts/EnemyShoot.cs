@@ -6,7 +6,7 @@ public class EnemyShoot : MonoBehaviour
 {
     
     public EnemyLaserMovement prefab;
-    public EnemyMovement enemy;
+    //public EnemyShipMovement enemy;
     public Transform ShipTip;
     float fireRate;
     float cooldown;
@@ -14,10 +14,12 @@ public class EnemyShoot : MonoBehaviour
 
     public void Start()
     {
+        /*
         prefab = Resources.Load<EnemyLaserMovement>("Prefabs/EnemyLaser");
         speed = enemy.speed;
         fireRate = 2f * (1f/speed); //2.2 Default
         cooldown = 1.95f;
+        */
     }
 
     void Update()
