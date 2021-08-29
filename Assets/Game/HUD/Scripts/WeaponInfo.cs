@@ -30,10 +30,12 @@ public class WeaponInfo : MonoBehaviour
 
     public void UpdateWeapon()
     {
+        Weapon.sprite = weaponequipment.EquippedWeapon.PickupIcon;
     }
 
     public void UpdateAmmo()
     {
+        Ammo.text = weaponequipment.Ammo.ToString();
     }
 }
 

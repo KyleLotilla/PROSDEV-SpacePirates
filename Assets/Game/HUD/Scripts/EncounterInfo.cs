@@ -24,14 +24,23 @@ public class EncounterInfo : MonoBehaviour
 
     void Start()
     {
-        CurrentEncounter.text = currentencountercount.Value.ToString();
-        TotalEncounter.text = MaxEncounter.Value.Encounters.Count.ToString();
+        
     }
     
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    public void UpdateCurrentEncounter()
+    {
         CurrentEncounter.text = currentencountercount.Value.ToString();
+    }
+
+    public void UpdateTotalEncounter()
+    {
+        TotalEncounter.text = MaxEncounter.Value.Encounters.Count.ToString();
     }
 }
 
