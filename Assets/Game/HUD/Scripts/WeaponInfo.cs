@@ -35,7 +35,14 @@ public class WeaponInfo : MonoBehaviour
 
     public void UpdateAmmo()
     {
-        Ammo.text = weaponequipment.Ammo.ToString();
+        if (weaponequipment.EquippedWeapon.UnlimitedAmmo)
+        {
+            Ammo.text = "\u221E";
+        }
+        else
+        {
+            Ammo.text = weaponequipment.Ammo.ToString();
+        }
     }
 }
 
