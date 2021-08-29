@@ -23,7 +23,6 @@ namespace DLSU.SpacePirates.HealthSystem
         public void TakeDamage(int damage)
         {
             health.TakeDamage(damage);
-            Debug.Log(health.CurrentHealth);
         }
     }
 }

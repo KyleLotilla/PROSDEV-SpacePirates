@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: WeaponEquipment
   m_EditorClassIdentifier: 
   ammo: 0
-  equippedWeapon: {fileID: 11400000, guid: 72570c765dce1534481dfa765006e88a, type: 2}
+  equippedWeapon: {fileID: 0}
+  weaponChanged: {fileID: 11400000, guid: c3c74be80b6ffb645a6b3ae158db1e4e, type: 2}

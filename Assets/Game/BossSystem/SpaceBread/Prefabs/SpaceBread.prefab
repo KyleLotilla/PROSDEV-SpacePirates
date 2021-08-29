@@ -310,7 +310,7 @@ MonoBehaviour:
   topBound: 1.7
   buttomBound: -1.7
   shipRigidbody: {fileID: 9084863961635695490}
-  speed: 5
+  speed: 3
 --- !u!114 &9084863961635695518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 9084863961635695512}
-  flashColor: {r: 1, g: 0.67058825, b: 0.43137255, a: 1}
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
   flashTime: 0.2
 --- !u!1 &9084863961980545072
 GameObject:

@@ -10,15 +10,15 @@ namespace DLSU.SpacePirates.WeaponSystem
 	)]
 	public class Weapon : ScriptableObject
 	{
-		[Tooltip("Sprite for this weapon.")]
+		[Tooltip("Pickup Icon for this weapon.")]
 		[SerializeField]
-		private Sprite sprite;
+		private Sprite pickupIcon;
 		[Tooltip("Projectile prefab for this weapon.")]
 		[SerializeField]
 		private GameObject projectilePrefab;
 		[Tooltip("Sprite for this weapon's ship barrel.")]
 		[SerializeField]
-		private Sprite shipBarrelSprite;
+		private WeaponBarrel barrel;
 		[Tooltip("If this weapon has unlimited ammo.")]
 		[SerializeField]
 		private bool unlimitedAmmo = false;
@@ -39,11 +39,11 @@ namespace DLSU.SpacePirates.WeaponSystem
 			new IntRange(10, 20)
 		};
 
-		public Sprite Sprite => sprite;
+		public Sprite PickupIcon => pickupIcon;
 
 		public GameObject ProjectilePrefab => projectilePrefab;
 
-		public Sprite ShipBarrelSprite => shipBarrelSprite;
+		public WeaponBarrel Barrel => barrel;
 
 		public bool UnlimitedAmmo => unlimitedAmmo;
 

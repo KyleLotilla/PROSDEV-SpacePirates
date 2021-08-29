@@ -18,14 +18,14 @@ TagManager:
   - UI
   - 
   - 
-  - CameraCollision
+  - Camera
   - EnemyProjectile
   - Enemy
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - PlayerProjectile
+  - Deadzone
+  - Pickups
+  - CameraBounds
   - 
   - 
   - 
