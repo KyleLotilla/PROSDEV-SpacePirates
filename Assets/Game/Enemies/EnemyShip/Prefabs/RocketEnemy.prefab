@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &772147090465285178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543025852298766840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3878d3377fa1a9f4fb296d6daa9577ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 80bcd151edefadc4697cf812139df3f2, type: 2}
+  database: {fileID: 11400000, guid: fa10c0428bec0cf469296b0bc8432337, type: 2}
 --- !u!1001 &5911035305683488574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68,6 +82,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 631990565943748290, guid: 5ba6780d08a1d3d44b53308689a7da44,
+        type: 3}
+      propertyPath: OnExplosionFinished.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 631990565943748290, guid: 5ba6780d08a1d3d44b53308689a7da44,
+        type: 3}
+      propertyPath: OnExplosionFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 631990565943748290, guid: 5ba6780d08a1d3d44b53308689a7da44,
+        type: 3}
+      propertyPath: OnExplosionFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 772147090465285178}
+    - target: {fileID: 631990565943748290, guid: 5ba6780d08a1d3d44b53308689a7da44,
+        type: 3}
+      propertyPath: OnExplosionFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 631990565943748290, guid: 5ba6780d08a1d3d44b53308689a7da44,
+        type: 3}
+      propertyPath: OnExplosionFinished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 631990565943748290, guid: 5ba6780d08a1d3d44b53308689a7da44,
+        type: 3}
+      propertyPath: OnExplosionFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 631990565943748294, guid: 5ba6780d08a1d3d44b53308689a7da44,
         type: 3}
       propertyPath: m_Name
@@ -102,3 +146,9 @@ PrefabInstance:
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ba6780d08a1d3d44b53308689a7da44, type: 3}
+--- !u!1 &6543025852298766840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 631990565943748294, guid: 5ba6780d08a1d3d44b53308689a7da44,
+    type: 3}
+  m_PrefabInstance: {fileID: 5911035305683488574}
+  m_PrefabAsset: {fileID: 0}

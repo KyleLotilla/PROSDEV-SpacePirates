@@ -230,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 99522215}
   - component: {fileID: 99522214}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: bottomBound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -719,7 +719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 390638602}
   - component: {fileID: 390638601}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: rightBound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1478,7 +1478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 645471231}
   - component: {fileID: 645471230}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: topBound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2082,7 +2082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1265341012}
   - component: {fileID: 1265341011}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: leftBound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3102,7 +3102,7 @@ Transform:
   m_LocalScale: {x: 0.23066877, y: 0.23066877, z: 0.23066877}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2122570872
 GameObject:
@@ -3368,7 +3368,7 @@ PrefabInstance:
     - target: {fileID: 6842703901152434340, guid: 8f3974ae2b62dd143b2d3103856903c1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6842703901152434340, guid: 8f3974ae2b62dd143b2d3103856903c1,
         type: 3}
