@@ -595,6 +595,11 @@ PrefabInstance:
       propertyPath: m_textInfo.characterCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 313384056358722901, guid: e0f6ea73170448e4cab224e11d15d389,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 313384056358722902, guid: e0f6ea73170448e4cab224e11d15d389,
         type: 3}
       propertyPath: m_textInfo.lineCount
@@ -880,7 +885,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gameEvent
       value: 
-      objectReference: {fileID: 11400000, guid: 332fa4f34371b8648960302b321f07a6,
+      objectReference: {fileID: 11400000, guid: d7730956ca6bb3d4ab2edd98d926474d,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0f6ea73170448e4cab224e11d15d389, type: 3}
@@ -1435,7 +1440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1966242622
 Animator:
   serializedVersion: 3
