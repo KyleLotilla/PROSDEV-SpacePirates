@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50101fdae4985944ca0550c7d1c79031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chance: 1
+  chance: 0.25
   database: {fileID: 11400000, guid: fa10c0428bec0cf469296b0bc8432337, type: 2}
 --- !u!1001 &3184333424826475556
 PrefabInstance:
