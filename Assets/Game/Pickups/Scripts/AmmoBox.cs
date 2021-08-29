@@ -6,9 +6,6 @@ namespace DLSU.SpacePirates.Pickups
 	/// <summary>
 	/// Increases the player's ammunition upon collision.
 	/// </summary>
-	[RequireComponent(typeof(Rigidbody2D))]
-	[RequireComponent(typeof(Collider2D))]
-	[RequireComponent(typeof(SpriteRenderer))]
 	public class AmmoBox : MonoBehaviour
 	{
 		[SerializeField]

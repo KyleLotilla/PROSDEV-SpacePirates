@@ -15,7 +15,7 @@ namespace DLSU.SpacePirates.Pickups
 		/// <summary>
 		/// Spawns the weapon directly on this object's position.
 		/// </summary>
-		private void Spawn()
+		public void Spawn()
 		{
 			if (weapon == null || database == null)
 				return;

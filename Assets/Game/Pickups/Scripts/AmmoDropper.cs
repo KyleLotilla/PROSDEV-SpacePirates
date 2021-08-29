@@ -16,13 +16,15 @@ namespace DLSU.SpacePirates.Pickups
 		/// <summary>
 		/// Spawns the ammo directly on this object's position.
 		/// </summary>
-		private void Spawn()
+		public void Spawn()
 		{
 			if (database == null)
 				return;
-
-			GameObject instance = Instantiate(database.AmmoBoxPrefab);
-			instance.transform.position = transform.position;
+			if (Random.Range(0.0f, 1.0f) <= chance)
+            {
+				GameObject instance = Instantiate(database.AmmoBoxPrefab);
+				instance.transform.position = transform.position;
+			}
 		}
 	}
 }
