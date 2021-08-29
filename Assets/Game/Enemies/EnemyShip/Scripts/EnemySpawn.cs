@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawn : IObstacleSpawn
+public class EnemySpawn
 {
-    public EnemyMovement prefab;
+    /*
+    public EnemyShipMovement prefab;
 
     public EnemySpawn()
     {
-        prefab = Resources.Load<EnemyMovement>("Prefabs/Enemy");
+        prefab = Resources.Load<EnemyShipMovement>("Prefabs/Enemy");
     }
 
     public void SpawnObstacle(Vector2 spawnPosition, float speed)
     {
-        EnemyMovement enemy = Object.Instantiate(prefab, spawnPosition, Quaternion.identity);
+        EnemyShipMovement enemy = Object.Instantiate(prefab, spawnPosition, Quaternion.identity);
         enemy.speed = speed;
     }
+    */
 }

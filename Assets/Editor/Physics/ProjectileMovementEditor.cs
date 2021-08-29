@@ -13,8 +13,8 @@ namespace DLSU.SpacePirates.Editor.Physics
         private SerializedProperty projectileRigidbody;
         private SerializedProperty velocity;
         private SerializedProperty hasAcceleration;
-        private SerializedProperty minSpeed;
-        private SerializedProperty maxSpeed;
+        private SerializedProperty minVelocity;
+        private SerializedProperty maxVelocity;
         private SerializedProperty acceleration;
         private SerializedProperty accelerationRate;
 
@@ -23,8 +23,8 @@ namespace DLSU.SpacePirates.Editor.Physics
             projectileRigidbody = serializedObject.FindProperty("projectileRigidbody");
             velocity = serializedObject.FindProperty("velocity");
             hasAcceleration = serializedObject.FindProperty("hasAcceleration");
-            minSpeed = serializedObject.FindProperty("minSpeed");
-            maxSpeed = serializedObject.FindProperty("maxSpeed");
+            minVelocity = serializedObject.FindProperty("minVelocity");
+            maxVelocity = serializedObject.FindProperty("maxVelocity");
             acceleration = serializedObject.FindProperty("acceleration");
             accelerationRate = serializedObject.FindProperty("accelerationRate");
         }
@@ -37,8 +37,8 @@ namespace DLSU.SpacePirates.Editor.Physics
             EditorGUILayout.PropertyField(hasAcceleration);
             if (hasAcceleration.boolValue)
             {
-                EditorGUILayout.PropertyField(minSpeed);
-                EditorGUILayout.PropertyField(maxSpeed);
+                EditorGUILayout.PropertyField(minVelocity);
+                EditorGUILayout.PropertyField(maxVelocity);
                 EditorGUILayout.PropertyField(acceleration);
                 EditorGUILayout.PropertyField(accelerationRate);
             }
