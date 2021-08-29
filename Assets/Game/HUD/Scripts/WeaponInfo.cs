@@ -20,14 +20,20 @@ public class WeaponInfo : MonoBehaviour
     
     void Start()
     {
-        Weapon.sprite = weaponequipment.EquippedWeapon.Sprite;
-        Ammo.text = weaponequipment.ammo.ToString();
+
     }
-    
+
     // Update is called once per frame
     void Update()
     {
-        Ammo.text = weaponequipment.ammo.ToString();
+    }
+
+    public void UpdateWeapon()
+    {
+    }
+
+    public void UpdateAmmo()
+    {
     }
 }
 

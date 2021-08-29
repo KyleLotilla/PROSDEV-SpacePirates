@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DLSU.SpacePirates.HealthSystem;
 using DLSU.SpacePirates.Util;
 
 namespace DLSU.SpacePirates.BossSystem
 {
-    public class BossSpawner : MonoBehaviour
+    public class BossHealthBar : MonoBehaviour
     {
         [SerializeField]
-        private BossDatabase bossDatabase;
+        private HealthBar healthBar;
         [SerializeField]
         private GameObjectVariable boss;
-        [SerializeField]
-        private GameEvent bossSpawned;
 
         // Start is called before the first frame update
         void Start()
@@ -26,13 +25,15 @@ namespace DLSU.SpacePirates.BossSystem
 
         }
 
-        public void SpawnBoss(BossSpawnInstance bossSpawnInstance)
+        public void OnBossSpawned()
         {
-            GameObject bossPrefab = bossDatabase.GetBoss(bossSpawnInstance.bossID);
-            if (bossPrefab != null)
+            if (boss.Value != null)
             {
-                boss.Value = Instantiate(bossPrefab, bossSpawnInstance.spawnPosition, bossSpawnInstance.spawnRotation);
-                bossSpawned.Raise();
+                Health health = boss.Value.GetComponent<Health>();
+                if (health != null)
+                {
+                    healthBar.Health = health;
+                }
             }
         }
     }

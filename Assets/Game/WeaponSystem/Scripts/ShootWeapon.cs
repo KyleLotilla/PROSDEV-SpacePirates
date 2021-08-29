@@ -71,7 +71,7 @@ namespace DLSU.SpacePirates.WeaponSystem
 		/// Primarily used to check if the weapon has ammo.
 		/// </summary>
 		public bool ShouldDiscard =>
-			Equipment.ammo <= 0 &&
+			Equipment.Ammo <= 0 &&
 			(Weapon == null || !Weapon.UnlimitedAmmo);
 
         private void Start()
@@ -109,16 +109,16 @@ namespace DLSU.SpacePirates.WeaponSystem
 
 			if (!ignoreAmmo && !weapon.UnlimitedAmmo)
 			{
-				if (Equipment.ammo <= 0 && useDefaultWeaponOnDepletion)
+				if (Equipment.Ammo <= 0 && useDefaultWeaponOnDepletion)
 					// Discard current weapon.
 					Weapon = database.DefaultPlayerWeapon;
 
-				if (Equipment.ammo <= 0)
+				if (Equipment.Ammo <= 0)
 					// Insufficient ammo!
 					return null;
 
 				// Decrease ammo.
-				Equipment.ammo--;
+				Equipment.Ammo--;
 			}
 
 			// Set on cooldown.
