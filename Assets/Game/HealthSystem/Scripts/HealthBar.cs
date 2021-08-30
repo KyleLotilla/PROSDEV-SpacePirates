@@ -67,7 +67,7 @@ namespace DLSU.SpacePirates.HealthSystem
             }
             else
             {
-                ChangeSliderColor(overHalfHealthColor);
+                ChangeSliderColor(lowHealthColor);
             }
         }
 

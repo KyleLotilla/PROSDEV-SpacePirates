@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DLSU.SpacePirates.Util;
 
 namespace DLSU.SpacePirates.BossSystem
 {
@@ -8,6 +9,10 @@ namespace DLSU.SpacePirates.BossSystem
     {
         [SerializeField]
         private BossDatabase bossDatabase;
+        [SerializeField]
+        private GameObjectVariable currentBoss;
+        [SerializeField]
+        private GameEvent bossSpawned;
 
         // Start is called before the first frame update
         void Start()
@@ -26,7 +31,8 @@ namespace DLSU.SpacePirates.BossSystem
             GameObject bossPrefab = bossDatabase.GetBoss(bossSpawnInstance.bossID);
             if (bossPrefab != null)
             {
-                Instantiate(bossPrefab, bossSpawnInstance.spawnPosition, bossSpawnInstance.spawnRotation);
+                currentBoss.Value = Instantiate(bossPrefab, bossSpawnInstance.spawnPosition, bossSpawnInstance.spawnRotation);
+                bossSpawned.Raise();
             }
         }
     }

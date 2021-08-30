@@ -10,9 +10,11 @@ namespace DLSU.SpacePirates.WeaponSystem
 	)]
 	public class Weapon : ScriptableObject
 	{
+        [SerializeField]
+        private string weaponName;
 		[Tooltip("Pickup Icon for this weapon.")]
 		[SerializeField]
-		private Sprite pickupIcon;
+		private Sprite icon;
 		[Tooltip("Projectile prefab for this weapon.")]
 		[SerializeField]
 		private GameObject projectilePrefab;
@@ -39,7 +41,9 @@ namespace DLSU.SpacePirates.WeaponSystem
 			new IntRange(10, 20)
 		};
 
-		public Sprite PickupIcon => pickupIcon;
+        public string WeaponName => weaponName;
+
+		public Sprite Icon => icon;
 
 		public GameObject ProjectilePrefab => projectilePrefab;
 

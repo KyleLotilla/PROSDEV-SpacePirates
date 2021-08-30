@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce379c47b50f6a045a78a866e874b2ed, type: 3}
   m_Name: RocketLauncher
   m_EditorClassIdentifier: 
-  pickupIcon: {fileID: 21300000, guid: a924e035af7d98f42a9c0b5bf577e65b, type: 3}
+  weaponName: Rocket Launcher
+  icon: {fileID: 21300000, guid: a924e035af7d98f42a9c0b5bf577e65b, type: 3}
   projectilePrefab: {fileID: 1490959407824652617, guid: 459a6a972ba415a4b92dc308ef66ee1b,
     type: 3}
   barrel:
