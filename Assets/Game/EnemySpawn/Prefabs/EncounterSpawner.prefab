@@ -104,4 +104,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDatabase: {fileID: 11400000, guid: f62b7f699f5e547439c8e31510f2e2dc, type: 2}
   strength: {fileID: 11400000, guid: da68a3c67a5d9324bad9b26d6b93e7b1, type: 2}
+  encounterStarted: {fileID: 11400000, guid: 516944d5946337b49bdcd7f61a5792a5, type: 2}
   encounterFinished: {fileID: 11400000, guid: 332fa4f34371b8648960302b321f07a6, type: 2}

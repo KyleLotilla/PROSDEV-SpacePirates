@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce379c47b50f6a045a78a866e874b2ed, type: 3}
   m_Name: Peashooter
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: de925017883007241a4a41a520f24f90, type: 3}
+  weaponName: Peashooter
+  icon: {fileID: 21300000, guid: 16a9024a118bc4d449a2bc8b8fd4ec9b, type: 3}
   projectilePrefab: {fileID: 6671932444758613728, guid: d3e019caf205c304daa41d3db0b5553d,
     type: 3}
   barrel:

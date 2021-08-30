@@ -13,6 +13,8 @@ namespace DLSU.SpacePirates.EnemySpawn
         [SerializeField]
         private FloatVariable strength;
         [SerializeField]
+        private GameEvent encounterStarted;
+        [SerializeField]
         private GameEvent encounterFinished;
 
         private Encounter currentEncounter;
@@ -47,6 +49,7 @@ namespace DLSU.SpacePirates.EnemySpawn
             timeInCurrentEncounter = 0.0f;
             strength.Value = currentEncounter.initialStrength;
             allEnemiesSpawned = false;
+            encounterStarted.Raise();
         }
 
         private void SpawnNextEnemies()

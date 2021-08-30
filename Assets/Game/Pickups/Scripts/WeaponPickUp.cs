@@ -21,7 +21,7 @@ namespace DLSU.SpacePirates.WeaponSystem
 
 				if (weapon != null)
                 {
-					iconRenderer.sprite = weapon.PickupIcon;
+					iconRenderer.sprite = weapon.Icon;
 				}
 			}
 		}
