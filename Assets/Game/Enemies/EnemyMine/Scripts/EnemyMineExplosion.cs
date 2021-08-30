@@ -11,10 +11,11 @@ public class EnemyMineExplosion : MonoBehaviour
     private float explosionRadius;
     [SerializeField]
     private CircleCollider2D mineCollider;
+    [SerializeField]
+    private string explosionLayer;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -25,6 +26,7 @@ public class EnemyMineExplosion : MonoBehaviour
 
     public void OnExplosionStart()
     {
+        gameObject.layer = LayerMask.NameToLayer(explosionLayer);
         Vector3 scale = transform.localScale;
         scale.x *= explosionScale;
         scale.y *= explosionScale;

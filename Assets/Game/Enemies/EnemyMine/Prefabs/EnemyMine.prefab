@@ -259,6 +259,7 @@ MonoBehaviour:
   explosionScale: 3
   explosionRadius: 1.7
   mineCollider: {fileID: 6792295769307254924}
+  explosionLayer: EnemyExplosion
 --- !u!114 &44581574269516459
 MonoBehaviour:
   m_ObjectHideFlags: 0
