@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: EnemyDatabase
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 6212950485000574065, guid: 336fd06c4b2f10642bb02a6771f74d04, type: 3}
+  - {fileID: 6792295769307254917, guid: 9ae88def1ffe9d44181d4ca0ed38d793, type: 3}
   - {fileID: 2662839534057079522, guid: 6a6c3c50d2e080e4d98b0108be32c660, type: 3}
   - {fileID: 6543025852298766840, guid: 6178f72e76b5cdd4eb48b1aa07181f55, type: 3}

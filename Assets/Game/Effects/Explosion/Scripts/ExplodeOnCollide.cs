@@ -10,7 +10,7 @@ namespace DLSU.SpacePirates.Effects
         private Explosion explosion;
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.gameObject.layer != LayerMask.NameToLayer("Deadzone"))
+            if (collision.gameObject.layer != LayerMask.NameToLayer("Deadzone") && enabled)
             {
                 explosion.Explode();
             }
