@@ -10,7 +10,7 @@ namespace DLSU.SpacePirates.BossSystem
         [SerializeField]
         private BossDatabase bossDatabase;
         [SerializeField]
-        private GameObjectVariable boss;
+        private GameObjectVariable currentBoss;
         [SerializeField]
         private GameEvent bossSpawned;
 
@@ -31,7 +31,7 @@ namespace DLSU.SpacePirates.BossSystem
             GameObject bossPrefab = bossDatabase.GetBoss(bossSpawnInstance.bossID);
             if (bossPrefab != null)
             {
-                boss.Value = Instantiate(bossPrefab, bossSpawnInstance.spawnPosition, bossSpawnInstance.spawnRotation);
+                currentBoss.Value = Instantiate(bossPrefab, bossSpawnInstance.spawnPosition, bossSpawnInstance.spawnRotation);
                 bossSpawned.Raise();
             }
         }
