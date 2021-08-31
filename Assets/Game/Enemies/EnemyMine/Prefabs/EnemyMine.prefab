@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 6792295769307254913}
   - component: {fileID: 577326885023583167}
   - component: {fileID: 44581574269516459}
-  - component: {fileID: 1899580956797844170}
   m_Layer: 10
   m_Name: EnemyMine
   m_TagString: Untagged
@@ -230,7 +229,18 @@ MonoBehaviour:
         m_CallState: 2
   OnExplosionFinished:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 0d52f4c9d8ba5ab4fb669fac61828cef, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6792295769307254913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,16 +283,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 6792295769307254927}
---- !u!114 &1899580956797844170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6792295769307254917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 079e4d8f0c65ee343ab50ab41013f0c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeEnemyDeath: {fileID: 11400000, guid: 0d52f4c9d8ba5ab4fb669fac61828cef, type: 2}

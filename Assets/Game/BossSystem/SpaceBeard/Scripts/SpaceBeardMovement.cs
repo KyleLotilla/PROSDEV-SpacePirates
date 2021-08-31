@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DLSU.SpacePirates.BossSystem.SpaceBread
+namespace DLSU.SpacePirates.BossSystem.SpaceBeard
 {
-    public class SpaceBreadMovement : MonoBehaviour
+    public class SpaceBeardMovement : MonoBehaviour
     {
         [SerializeField]
         private float topBound;

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace DLSU.SpacePirates.BossSystem.SpaceBread
+namespace DLSU.SpacePirates.BossSystem.SpaceBeard
 {
-    public class SpaceBreadShooting : MonoBehaviour
+    public class SpaceBeardShooting : MonoBehaviour
     {
         [SerializeField]
         private GameObject skullProjectile;

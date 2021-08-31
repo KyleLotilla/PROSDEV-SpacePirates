@@ -18,9 +18,8 @@ GameObject:
   - component: {fileID: 5543016311554530443}
   - component: {fileID: 497917619422928494}
   - component: {fileID: 2540227991497441082}
-  - component: {fileID: 5559767756706308439}
   m_Layer: 10
-  m_Name: PeashooterEnemy
+  m_Name: BaseEnemyShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,7 +286,18 @@ MonoBehaviour:
         m_CallState: 2
   OnExplosionFinished:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 0d52f4c9d8ba5ab4fb669fac61828cef, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5543016311554530443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,19 +347,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 631990565943748288}
   flashColor: {r: 1, g: 0, b: 0, a: 1}
   flashTime: 0.4
---- !u!114 &5559767756706308439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631990565943748294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 079e4d8f0c65ee343ab50ab41013f0c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeEnemyDeath: {fileID: 11400000, guid: 0d52f4c9d8ba5ab4fb669fac61828cef, type: 2}
 --- !u!1 &631990566387676735
 GameObject:
   m_ObjectHideFlags: 0

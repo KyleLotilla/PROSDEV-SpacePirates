@@ -39,6 +39,17 @@ MonoBehaviour:
       spawnDelayTime: 0
       spawnPosition: {x: 8.9, y: 3}
       spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+  - initialStrength: 1
+    maxStrength: 3
+    enemySpawns:
+    - enemyID: 1
+      spawnDelayTime: 2
+      spawnPosition: {x: 9, y: 0}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+    - enemyID: 1
+      spawnDelayTime: 0
+      spawnPosition: {x: 8.9, y: 3}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
   boss:
     bossID: 0
     spawnPosition: {x: 5.5, y: 0.03}

@@ -21,7 +21,7 @@ MonoBehaviour:
       type: 2}
     positionOffset: {x: 0.004, y: -0.024}
   unlimitedAmmo: 0
-  fireRate: 1
+  fireRate: 0.8
   initialAmmoRanges:
   - min: 20
     max: 30

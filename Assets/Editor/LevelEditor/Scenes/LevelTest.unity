@@ -496,6 +496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a662feb46b043a141a1002ab15519b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeEnemyDeath: {fileID: 11400000, guid: 0d52f4c9d8ba5ab4fb669fac61828cef, type: 2}
+  enemyLayerName: Enemy
 --- !u!61 &708064035
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -776,6 +778,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a662feb46b043a141a1002ab15519b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeEnemyDeath: {fileID: 11400000, guid: 0d52f4c9d8ba5ab4fb669fac61828cef, type: 2}
+  enemyLayerName: Enemy
 --- !u!1001 &1254520595
 PrefabInstance:
   m_ObjectHideFlags: 0

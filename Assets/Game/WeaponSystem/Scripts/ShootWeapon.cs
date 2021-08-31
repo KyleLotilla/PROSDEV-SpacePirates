@@ -101,35 +101,35 @@ namespace DLSU.SpacePirates.WeaponSystem
 				// On cooldown.
 				return null;
 
-			Weapon weapon = Weapon;
+			Weapon currentWeapon = Weapon;
 
-			if (weapon == null)
+			if (currentWeapon == null)
 				// No weapon.
 				return null;
 
-			if (!ignoreAmmo && !weapon.UnlimitedAmmo)
+			if (!ignoreAmmo && !currentWeapon.UnlimitedAmmo)
 			{
-				if (Equipment.Ammo <= 0 && useDefaultWeaponOnDepletion)
-					// Discard current weapon.
+				if (Equipment.Ammo - 1 <= 0 && useDefaultWeaponOnDepletion)
+                {
 					Weapon = database.DefaultPlayerWeapon;
-
-				if (Equipment.Ammo <= 0)
-					// Insufficient ammo!
+				}
+				else if (Equipment.Ammo - 1 <= 0)
+                {
 					return null;
-
+				}
 				// Decrease ammo.
 				Equipment.Ammo--;
 			}
 
 			// Set on cooldown.
-			cooldown = weapon.FireRate;
+			cooldown = currentWeapon.FireRate;
 
-			if (weapon.ProjectilePrefab == null)
+			if (currentWeapon.ProjectilePrefab == null)
 				// No projectile.
 				return null;
 
 			// Launch projectile.
-			GameObject @object = Instantiate(weapon.ProjectilePrefab, null);
+			GameObject @object = Instantiate(currentWeapon.ProjectilePrefab, null);
 			@object.transform.SetPositionAndRotation(
 				origin,
 				Quaternion.Euler(0f, 0f, Mathf.Atan2(direction.y, direction.x))

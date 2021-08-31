@@ -9,7 +9,7 @@ TagManager:
   - Bullet
   - PlayerLaser
   - EnemyLaser
-  - Space Bread
+  - Space Beard
   layers:
   - Default
   - TransparentFX

@@ -102,11 +102,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileRigidbody: {fileID: 1490959407824652630}
-  velocity: {x: 5, y: 0}
+  velocity: {x: 15, y: 0}
   hasAcceleration: 1
   minVelocity: {x: 1, y: 0}
-  maxVelocity: {x: 20, y: 0}
-  acceleration: {x: 5, y: 0}
+  maxVelocity: {x: 35, y: 0}
+  acceleration: {x: 20, y: 0}
   accelerationRate: 0.4
 --- !u!50 &1490959407824652630
 Rigidbody2D:
