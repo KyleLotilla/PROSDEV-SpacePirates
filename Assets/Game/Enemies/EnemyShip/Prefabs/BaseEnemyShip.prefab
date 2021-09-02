@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 5543016311554530443}
   - component: {fileID: 497917619422928494}
   - component: {fileID: 2540227991497441082}
+  - component: {fileID: 3668460512070546976}
   m_Layer: 10
   m_Name: BaseEnemyShip
   m_TagString: Untagged
@@ -185,7 +186,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5796808593606377955}
+      - m_Target: {fileID: 3668460512070546976}
         m_MethodName: OnHealthChanged
         m_Mode: 0
         m_Arguments:
@@ -206,6 +207,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: d7e45ca9c5a445c4faa9028accadaf09, type: 2}
+        m_MethodName: AddScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -347,6 +359,20 @@ MonoBehaviour:
   spriteRenderer: {fileID: 631990565943748288}
   flashColor: {r: 1, g: 0, b: 0, a: 1}
   flashTime: 0.4
+--- !u!114 &3668460512070546976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631990565943748294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39a4ffd7184d4d49bd2ad9e8c4a7490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 11400000, guid: d7e45ca9c5a445c4faa9028accadaf09, type: 2}
+  scorePerDamage: 10
 --- !u!1 &631990566387676735
 GameObject:
   m_ObjectHideFlags: 0
