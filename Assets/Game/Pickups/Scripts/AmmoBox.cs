@@ -1,5 +1,6 @@
 ﻿using DLSU.SpacePirates.WeaponSystem;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace DLSU.SpacePirates.Pickups
 {
@@ -10,6 +11,8 @@ namespace DLSU.SpacePirates.Pickups
 	{
 		[SerializeField]
 		private bool ignoreUnlimitedAmmoWeapons = true;
+		[SerializeField]
+		private UnityEvent onPickup;
 
 		private void OnTriggerEnter2D(Collider2D collision)
 		{
@@ -23,6 +26,7 @@ namespace DLSU.SpacePirates.Pickups
 				return;
 
 			shooter.Equipment.AddRandomAmmo();
+			onPickup.Invoke();
 			Destroy(gameObject);
 		}
 	}

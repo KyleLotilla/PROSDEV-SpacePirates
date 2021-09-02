@@ -13,6 +13,8 @@ namespace DLSU.SpacePirates.BossSystem.SpaceBeard
         private Transform spawnPosition;
         [SerializeField]
         private float fireRate;
+        [SerializeField]
+        private AudioSource audioSource;
 
         private float ticks = 0.0f;
         // Start is called before the first frame update
@@ -35,6 +37,7 @@ namespace DLSU.SpacePirates.BossSystem.SpaceBeard
         public void SpawnProjectile()
         {
             Instantiate(skullProjectile, transform.position, Quaternion.identity);
+            audioSource.Play();
         }
     }
 

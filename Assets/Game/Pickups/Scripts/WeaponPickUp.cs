@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace DLSU.SpacePirates.WeaponSystem
 {
@@ -11,7 +12,8 @@ namespace DLSU.SpacePirates.WeaponSystem
 		private Weapon weapon;
 		[SerializeField]
 		private SpriteRenderer iconRenderer;
-
+		[SerializeField]
+		private UnityEvent onPickup;
 		public Weapon Weapon
 		{
 			get => weapon;
@@ -41,6 +43,8 @@ namespace DLSU.SpacePirates.WeaponSystem
             {
 				shooter.Weapon = weapon;
 			}
+
+			onPickup.Invoke();
 			Destroy(gameObject);
 		}
 	}
