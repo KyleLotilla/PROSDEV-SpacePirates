@@ -10,7 +10,7 @@ namespace DLSU.SpacePirates.EnemySpawn
         [SerializeField]
         private GameEvent activeEnemyDeath;
 
-        private void OnDestroy()
+        public void RaiseEnemyDeath()
         {
             activeEnemyDeath.Raise();
         }

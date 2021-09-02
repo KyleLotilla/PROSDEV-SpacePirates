@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - PlayerLaser
   - EnemyLaser
+  - Space Beard
   layers:
   - Default
   - TransparentFX
@@ -18,15 +19,15 @@ TagManager:
   - UI
   - 
   - 
-  - CameraCollision
+  - Camera
   - EnemyProjectile
   - Enemy
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - PlayerProjectile
+  - Deadzone
+  - Pickups
+  - CameraBounds
+  - EnemyExplosion
   - 
   - 
   - 

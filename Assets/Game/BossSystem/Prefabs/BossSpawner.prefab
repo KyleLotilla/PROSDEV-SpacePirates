@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossDatabase: {fileID: 11400000, guid: 1064e40d49dcb7e4a8a94c76a2e1df18, type: 2}
+  currentBoss: {fileID: 11400000, guid: 44b371fdc53faf146b93af225e3353ff, type: 2}
+  bossSpawned: {fileID: 11400000, guid: b2426405670f70248aa2f8166d06aede, type: 2}

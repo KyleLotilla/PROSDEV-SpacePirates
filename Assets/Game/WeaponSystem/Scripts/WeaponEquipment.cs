@@ -1,4 +1,5 @@
 using UnityEngine;
+using DLSU.SpacePirates.Util;
 
 namespace DLSU.SpacePirates.WeaponSystem
 {
@@ -9,9 +10,14 @@ namespace DLSU.SpacePirates.WeaponSystem
 	)]
 	public class WeaponEquipment : ScriptableObject
 	{
-		public int ammo;
+		[SerializeField]
+		private int ammo;
 		[SerializeField]
 		private Weapon equippedWeapon;
+		[SerializeField]
+		private GameEvent weaponChanged;
+		[SerializeField]
+		private GameEvent ammoChanged;
 
 		public Weapon EquippedWeapon
 		{
@@ -19,9 +25,23 @@ namespace DLSU.SpacePirates.WeaponSystem
 			set
 			{
 				equippedWeapon = value;
-				ammo = value.RandomInitialAmmo;
+				Ammo = value.RandomInitialAmmo;
+				weaponChanged.Raise();
 			}
 		}
+
+		public int Ammo
+        {
+			get
+            {
+				return ammo;
+            }
+			set
+            {
+				ammo = value;
+				ammoChanged.Raise();
+			}
+        }
 
 		public void AddAmmo(int amount)
 		{
@@ -31,5 +51,11 @@ namespace DLSU.SpacePirates.WeaponSystem
 
 		public void AddRandomAmmo() =>
 			AddAmmo(equippedWeapon.RandomAmmo);
-	}
+
+        private void OnEnable()
+        {
+			equippedWeapon = null;
+			ammo = 0;
+		}
+    }
 }

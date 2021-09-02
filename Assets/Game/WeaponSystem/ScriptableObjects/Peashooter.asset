@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce379c47b50f6a045a78a866e874b2ed, type: 3}
   m_Name: Peashooter
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  weaponName: Peashooter
+  icon: {fileID: 21300000, guid: 16a9024a118bc4d449a2bc8b8fd4ec9b, type: 3}
   projectilePrefab: {fileID: 6671932444758613728, guid: d3e019caf205c304daa41d3db0b5553d,
     type: 3}
-  shipBarrelSprite: {fileID: 0}
-  unlimitedAmmo: 0
-  fireRate: 0
+  barrel:
+    animatorController: {fileID: 9100000, guid: 166efb67c03d902408485e8a6b3b7a8e,
+      type: 2}
+    positionOffset: {x: 0, y: 0}
+  unlimitedAmmo: 1
+  fireRate: 0.2
   initialAmmoRanges:
   - min: 20
     max: 30

@@ -15,6 +15,9 @@ MonoBehaviour:
   registries:
   - id: 0
     weapon: {fileID: 11400000, guid: 12d7f32c5d047ad4c927b85f146ad62c, type: 2}
-  weaponPickUpPrefab: {fileID: 0}
+  weaponPickUpPrefab: {fileID: 5141525347976934811, guid: 97cb88e46654edc438cd1efc71b25b48,
+    type: 3}
+  ammoBoxPrefab: {fileID: 4074322380080275960, guid: 07864628b7e80b241810689d2d787876,
+    type: 3}
   defaultPlayerWeapon: {fileID: 11400000, guid: 12d7f32c5d047ad4c927b85f146ad62c,
     type: 2}
