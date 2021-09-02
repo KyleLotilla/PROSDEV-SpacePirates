@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7554789738462471404}
   - component: {fileID: 2885151714649297822}
   - component: {fileID: 6846702693090693094}
+  - component: {fileID: 8565807287841044189}
   m_Layer: 14
   m_Name: BasePickup
   m_TagString: Untagged
@@ -150,3 +151,18 @@ MonoBehaviour:
   maxVelocity: {x: 0, y: 0}
   acceleration: {x: 0, y: 0}
   accelerationRate: 1
+--- !u!114 &8565807287841044189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2425013923238881115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91f4f7bcc6450704ea8a3b0ce8680e61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 11400000, guid: d7e45ca9c5a445c4faa9028accadaf09, type: 2}
+  addedScore: 20
+  playerLayerName: Player

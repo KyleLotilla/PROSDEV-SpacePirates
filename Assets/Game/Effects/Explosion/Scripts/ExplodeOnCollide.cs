@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DLSU.SpacePirates.Effects
+namespace DLSU.SpacePirates.Effects.Explosion
 {
     public class ExplodeOnCollide : MonoBehaviour
     {

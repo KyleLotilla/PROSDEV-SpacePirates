@@ -20,6 +20,8 @@ namespace DLSU.SpacePirates.WeaponSystem
 		private GameObject projectilePrefab;
 		[Tooltip("Sprite for this weapon's ship barrel.")]
 		[SerializeField]
+		private AudioClip shotSound;
+		[SerializeField]
 		private WeaponBarrel barrel;
 		[Tooltip("If this weapon has unlimited ammo.")]
 		[SerializeField]
@@ -46,6 +48,8 @@ namespace DLSU.SpacePirates.WeaponSystem
 		public Sprite Icon => icon;
 
 		public GameObject ProjectilePrefab => projectilePrefab;
+
+		public AudioClip ShotSound => shotSound;
 
 		public WeaponBarrel Barrel => barrel;
 

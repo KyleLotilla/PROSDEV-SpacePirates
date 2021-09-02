@@ -2,18 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using DLSU.SpacePirates.Util;
 
-namespace DLSU.SpacePirates.Effects
+namespace DLSU.SpacePirates.Effects.Explosion
 {
     public class Explosion : MonoBehaviour
     {
         [SerializeField]
         private Animator animator;
-        [SerializeField]
-        private AudioClip explosionSound;
-        [SerializeField]
-        [Range(0.0f, 1.0f)]
-        private float explosionVolume = 1.0f;
         [SerializeField]
         private bool destroyOnFinish;
         [SerializeField]
@@ -37,7 +33,6 @@ namespace DLSU.SpacePirates.Effects
         public void Explode()
         {
             OnExplosionStart?.Invoke();
-            AudioSource.PlayClipAtPoint(explosionSound, new Vector3(0.0f, 0.0f), explosionVolume);
             animator.SetBool("explode", true);
         }
 

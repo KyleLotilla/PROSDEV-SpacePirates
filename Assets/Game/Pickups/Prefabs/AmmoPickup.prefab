@@ -13,6 +13,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreUnlimitedAmmoWeapons: 0
+  onPickup:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 251970cce9b2c3d4fa85d34c8e23a988, type: 2}
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 6702ace52792dcd41baf187f2c76b872,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1814255546603947683
 PrefabInstance:
   m_ObjectHideFlags: 0
