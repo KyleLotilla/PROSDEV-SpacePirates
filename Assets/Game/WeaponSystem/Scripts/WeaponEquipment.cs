@@ -46,7 +46,10 @@ namespace DLSU.SpacePirates.WeaponSystem
 		public void AddAmmo(int amount)
 		{
 			if (equippedWeapon != null)
+            {
 				ammo += amount;
+				ammoChanged.Raise();
+			}
 		}
 
 		public void AddRandomAmmo() =>

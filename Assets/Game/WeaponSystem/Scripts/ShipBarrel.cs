@@ -7,6 +7,8 @@ namespace DLSU.SpacePirates.WeaponSystem
     public class ShipBarrel : MonoBehaviour
     {
         [SerializeField]
+        private WeaponEquipment weaponEquipment;
+        [SerializeField]
         private Animator shipBarrelAnimator;
         private Vector2 originPosition;
         public WeaponBarrel WeaponBarrel
@@ -22,6 +24,11 @@ namespace DLSU.SpacePirates.WeaponSystem
         private void Awake()
         {
             originPosition = transform.localPosition;
+        }
+
+        public void OnWeaponChanged()
+        {
+            WeaponBarrel = weaponEquipment.EquippedWeapon.Barrel;
         }
 
         public void ShootBarrel()

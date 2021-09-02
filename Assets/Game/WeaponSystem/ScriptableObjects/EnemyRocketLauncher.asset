@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce379c47b50f6a045a78a866e874b2ed, type: 3}
   m_Name: EnemyRocketLauncher
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  weaponName: 
+  icon: {fileID: 0}
   projectilePrefab: {fileID: 4577961921007619597, guid: c03123f1f0252c844b3748c55af70c79,
     type: 3}
+  shotSound: {fileID: 8300000, guid: 6491a2cca4692954b83a1d48433aaa70, type: 3}
   barrel:
     animatorController: {fileID: 0}
     positionOffset: {x: 0, y: 0}
