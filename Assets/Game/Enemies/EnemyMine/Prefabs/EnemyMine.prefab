@@ -177,6 +177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 6792295769307254914}
+  explosionSound: {fileID: 8300000, guid: 914cc035f969ae14a9051e5b28d7d859, type: 3}
+  explosionVolume: 0.3
   destroyOnFinish: 1
   OnExplosionStart:
     m_PersistentCalls:
@@ -225,14 +227,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 251970cce9b2c3d4fa85d34c8e23a988, type: 2}
-        m_MethodName: PlayOneShot
-        m_Mode: 2
+      - m_Target: {fileID: 11400000, guid: d7e45ca9c5a445c4faa9028accadaf09, type: 2}
+        m_MethodName: AddScore
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 914cc035f969ae14a9051e5b28d7d859,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 50
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
