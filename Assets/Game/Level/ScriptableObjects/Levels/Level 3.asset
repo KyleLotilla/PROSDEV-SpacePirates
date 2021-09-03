@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff06adb6846d1f84a93b472c0a2dce91, type: 3}
-  m_Name: Level 2
+  m_Name: Level 3
   m_EditorClassIdentifier: 
   encounters:
   - initialStrength: 1
@@ -195,7 +195,7 @@ MonoBehaviour:
       spawnDelayTime: 6
       spawnPosition: {x: 10, y: 2}
       spawnRotation: {x: 0, y: 0, z: 0, w: 1}
-    - enemyID: 1
+    - enemyID: 3
       spawnDelayTime: 8
       spawnPosition: {x: 10, y: 4}
       spawnRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -206,7 +206,7 @@ MonoBehaviour:
       spawnDelayTime: 0
       spawnPosition: {x: 10, y: -4}
       spawnRotation: {x: 0, y: 0, z: 0, w: 1}
-    - enemyID: 1
+    - enemyID: 2
       spawnDelayTime: 1
       spawnPosition: {x: 10, y: -2}
       spawnRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -214,7 +214,7 @@ MonoBehaviour:
       spawnDelayTime: 2
       spawnPosition: {x: 10, y: 0}
       spawnRotation: {x: 0, y: 0, z: 0, w: 1}
-    - enemyID: 1
+    - enemyID: 3
       spawnDelayTime: 6
       spawnPosition: {x: 10, y: 4}
       spawnRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -246,3 +246,4 @@ MonoBehaviour:
     bossID: 0
     spawnPosition: {x: 5.5, y: 0.03}
     spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+  background: {fileID: 2100000, guid: fc57875b4e0075b4db6cde44a069818f, type: 2}
