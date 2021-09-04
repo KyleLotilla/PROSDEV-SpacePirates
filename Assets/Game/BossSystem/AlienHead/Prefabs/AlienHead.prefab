@@ -113,12 +113,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5982455873789182002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb0e49fb0ac53c84c8bd8695c4c7afef, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d68915a2daddfd429d1c2e925eab289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topBound: 6.7
-  buttomBound: -6.7
-  shipRigidbody: {fileID: -4888960312561158513}
-  speed: 7.5
-  rightBound: 8.65
+  topBound: 3.7
+  buttomBound: -3.7
+  rightBound: 7.65
   leftBound: -3.7
+  alienRigidBody: {fileID: -4888960312561158513}
+  speed: 7.5
+  currentState: 0
+  cooldown: 3
+  forwardAttackRate: 70
+  ticks: 0

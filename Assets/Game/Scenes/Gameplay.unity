@@ -807,38 +807,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1704735843084608914, guid: 000af49a9c57a144f81025d0313b7e5a,
         type: 3}
-      propertyPath: speed
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1704735843084608914, guid: 000af49a9c57a144f81025d0313b7e5a,
-        type: 3}
-      propertyPath: speed.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1704735843084608914, guid: 000af49a9c57a144f81025d0313b7e5a,
-        type: 3}
-      propertyPath: speed.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1704735843084608914, guid: 000af49a9c57a144f81025d0313b7e5a,
-        type: 3}
-      propertyPath: topBound
-      value: 6.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1704735843084608914, guid: 000af49a9c57a144f81025d0313b7e5a,
-        type: 3}
-      propertyPath: leftBound
-      value: -3.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1704735843084608914, guid: 000af49a9c57a144f81025d0313b7e5a,
-        type: 3}
       propertyPath: rightBound
-      value: 8.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 1704735843084608914, guid: 000af49a9c57a144f81025d0313b7e5a,
-        type: 3}
-      propertyPath: buttomBound
-      value: -6.7
+      value: 7.65
       objectReference: {fileID: 0}
     - target: {fileID: 1704735843084608914, guid: 000af49a9c57a144f81025d0313b7e5a,
         type: 3}
