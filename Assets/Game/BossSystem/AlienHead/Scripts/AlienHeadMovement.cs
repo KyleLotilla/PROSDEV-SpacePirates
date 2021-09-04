@@ -20,18 +20,19 @@ namespace DLSU.SpacePirates.BossSystem.AlienHead
         private float leftBound;
 
 
+        
         // Start is called before the first frame update
         void Start()
         {
-           shipRigidbody.velocity = new Vector2(speed, speed);
-           //shipRigidbody.velocity = new Vector2(speed, 0.0f);
+           
+           shipRigidbody.velocity = new Vector2(speed, 0.0f);
         }
 
         // Update is called once per frame
         void Update()
         {
+            //RegularMovement();
             ForwardAttack();
-            RegularMovement();
         }
 
         public void RegularMovement()
