@@ -13,6 +13,7 @@ namespace DLSU.SpacePirates.BossSystem.AlienHead
         FORWARD_ATTACK_END,
         CHARGING_LASER,
         LASER,
+        LASER_FIRING,
         LASER_END
     }
 
@@ -49,11 +50,19 @@ namespace DLSU.SpacePirates.BossSystem.AlienHead
         private float ChargeUpTime;
         private float PreviousChargeUpTime;
 
+        [SerializeField]
+        private float LaserFireTime;
+        private float PreviousLaserFireTime;
+
+        private GameObject beam;
+
+
         // Start is called before the first frame update
         void Start()
         {
             TransitionIntoRegularMovement();
             PreviousChargeUpTime = ChargeUpTime;
+            PreviousLaserFireTime = LaserFireTime;
         }
 
         // Update is called once per frame
@@ -98,9 +107,19 @@ namespace DLSU.SpacePirates.BossSystem.AlienHead
             }
             else if(currentState == AlienHeadState.LASER)
             {
-               TransitionIntoFireLaser();
-                ChargeUpTime = PreviousChargeUpTime;
+                LaserAttack();
             }
+            else if(currentState == AlienHeadState.LASER_FIRING)
+            {
+                TransitionIntoLaserAttackEnd();
+            }
+            else if(currentState == AlienHeadState.LASER_END)
+            {
+                ChargeUpTime = PreviousChargeUpTime;
+                LaserFireTime = PreviousLaserFireTime;
+                TransitionIntoRegularMovement();
+            }
+            
         }
 
         public void TransitionIntoRegularMovement()
@@ -156,14 +175,29 @@ namespace DLSU.SpacePirates.BossSystem.AlienHead
             }
             else
             {
-                currentState = AlienHeadState.LASER;
+                TransitionIntoFireLaser();
+                
             }
         }
 
         public void TransitionIntoFireLaser()
         {
             //RegularMovement();
-            LaserAttack();
+            currentState = AlienHeadState.LASER;
+        }
+
+        public void TransitionIntoLaserAttackEnd()
+        {
+            if(LaserFireTime > 0)
+            {
+                LaserFireTime -= Time.deltaTime;
+                alienRigidBody.velocity = new Vector2(0.0f, 0.0f);
+            }
+            else
+            {
+                Destroy(beam);
+                currentState = AlienHeadState.LASER_END;
+            }
         }
 
         public void ForwardAttack()
@@ -177,9 +211,9 @@ namespace DLSU.SpacePirates.BossSystem.AlienHead
         public void LaserAttack()
         {
             alienRigidBody.velocity = new Vector2(0.0f, 0.0f);
-            GameObject beam = Instantiate(laserProjectile, spawnLaserPosition.position, Quaternion.identity);
-            //Destroy(beam);
-            TransitionIntoRegularMovement();
+            beam = Instantiate(laserProjectile, spawnLaserPosition.position, Quaternion.identity);
+            currentState = AlienHeadState.LASER_FIRING;
+            
         }
 
         public void TransitionIntoForwardAttackEnd()

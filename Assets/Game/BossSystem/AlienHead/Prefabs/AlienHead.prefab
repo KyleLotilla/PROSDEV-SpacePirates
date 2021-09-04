@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4688103139338315898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.97, y: 0, z: 0}
+  m_LocalPosition: {x: -2.126, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 6026109179534321443}
@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 552461612762889119}
   - component: {fileID: -4888960312561158513}
   - component: {fileID: 1704735843084608914}
+  - component: {fileID: 1624650300683792542}
   m_Layer: 0
   m_Name: AlienHead
   m_TagString: Untagged
@@ -157,7 +158,28 @@ MonoBehaviour:
   cooldown: 3
   forwardAttackRate: 30
   fireLaserRate: 60
-  laserProjectile: {fileID: 0}
-  spawnLaserPosition: {fileID: 0}
+  laserProjectile: {fileID: 4575505365853989614, guid: dc32ce07f58b4e04399c091374561298,
+    type: 3}
+  spawnLaserPosition: {fileID: 9025849274168452414}
   ticks: 0
-  ChargeUpTime: 0
+  ChargeUpTime: 5
+  LaserFireTime: 5
+--- !u!95 &1624650300683792542
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5982455873789182002}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f59b92a8b5e214b45b1f71b9e3b666aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

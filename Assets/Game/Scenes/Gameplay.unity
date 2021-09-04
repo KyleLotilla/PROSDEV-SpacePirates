@@ -807,11 +807,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1704735843084608914, guid: 000af49a9c57a144f81025d0313b7e5a,
         type: 3}
-      propertyPath: ChargeUpTime
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1704735843084608914, guid: 000af49a9c57a144f81025d0313b7e5a,
-        type: 3}
       propertyPath: cooldownRate
       value: 0.5
       objectReference: {fileID: 0}
@@ -820,17 +815,6 @@ PrefabInstance:
       propertyPath: shipRigidbody2
       value: 
       objectReference: {fileID: 846059276}
-    - target: {fileID: 1704735843084608914, guid: 000af49a9c57a144f81025d0313b7e5a,
-        type: 3}
-      propertyPath: laserProjectile
-      value: 
-      objectReference: {fileID: 4575505365853989614, guid: dc32ce07f58b4e04399c091374561298,
-        type: 3}
-    - target: {fileID: 1704735843084608914, guid: 000af49a9c57a144f81025d0313b7e5a,
-        type: 3}
-      propertyPath: spawnLaserPosition
-      value: 
-      objectReference: {fileID: 1023003410}
     - target: {fileID: 5982455873789182002, guid: 000af49a9c57a144f81025d0313b7e5a,
         type: 3}
       propertyPath: m_Name
@@ -906,14 +890,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9025849274168452414, guid: 000af49a9c57a144f81025d0313b7e5a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.264
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 000af49a9c57a144f81025d0313b7e5a, type: 3}
---- !u!4 &1023003410 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9025849274168452414, guid: 000af49a9c57a144f81025d0313b7e5a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1023003409}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1249130790
 GameObject:
   m_ObjectHideFlags: 0
