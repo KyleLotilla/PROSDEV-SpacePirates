@@ -8,6 +8,20 @@ namespace DLSU.SpacePirates.HealthSystem
     {
         [SerializeField]
         private Health health;
+        [SerializeField]
+        private bool canHit = true;
+
+        public bool CanHit
+        {
+            get
+            {
+                return canHit;
+            }
+            set
+            {
+                canHit = value;
+            }
+        }
         // Start is called before the first frame update
         void Start()
         {
@@ -22,7 +36,10 @@ namespace DLSU.SpacePirates.HealthSystem
 
         public void TakeDamage(int damage)
         {
-            health.TakeDamage(damage);
+            if (canHit)
+            {
+                health.TakeDamage(damage);
+            }
         }
     }
 }
