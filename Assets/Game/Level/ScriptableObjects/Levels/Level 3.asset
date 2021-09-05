@@ -243,7 +243,7 @@ MonoBehaviour:
       spawnPosition: {x: 10, y: 2}
       spawnRotation: {x: 0, y: 0, z: 0, w: 1}
   boss:
-    bossID: 0
-    spawnPosition: {x: 5.5, y: 0.03}
+    bossID: 1
+    spawnPosition: {x: 0, y: 0}
     spawnRotation: {x: 0, y: 0, z: 0, w: 1}
   background: {fileID: 2100000, guid: fc57875b4e0075b4db6cde44a069818f, type: 2}

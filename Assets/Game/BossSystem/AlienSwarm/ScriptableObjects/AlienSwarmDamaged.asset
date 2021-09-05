@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4044220557247dd48a920e6bb07697bc, type: 3}
-  m_Name: BossDatabase
+  m_Script: {fileID: 11500000, guid: 58de84f54e3b3b74b8dd4235629f434c, type: 3}
+  m_Name: AlienSwarmDamaged
   m_EditorClassIdentifier: 
-  bossPrefabs:
-  - {fileID: 9084863961635695513, guid: 5068af4204431344cb7f2391ed4437f1, type: 3}
-  - {fileID: 763288213597725747, guid: eb525b037087dec4b8654bb8e1482e51, type: 3}

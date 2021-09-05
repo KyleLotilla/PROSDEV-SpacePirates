@@ -8,6 +8,18 @@ namespace DLSU.SpacePirates.HealthSystem
     {
         [SerializeField]
         private Health health;
+
+        public Health Health
+        {
+            get
+            {
+                return health;
+            }
+            set
+            {
+                health = value;
+            }
+        }
         // Start is called before the first frame update
         void Start()
         {
