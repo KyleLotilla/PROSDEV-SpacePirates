@@ -24,6 +24,7 @@ namespace DLSU.SpacePirates.Level
         // Start is called before the first frame update
         void Start()
         {
+            currentEncounterCount.Value = 0;
             Debug.Assert(currentLevel.Value != null, "Level not initialized yet");
             levelEncounters = currentLevel.Value.Encounters;
             encounterSpawner.StartEncounter(levelEncounters[currentEncounterCount.Value]);

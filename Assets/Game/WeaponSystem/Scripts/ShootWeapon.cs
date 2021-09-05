@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace DLSU.SpacePirates.WeaponSystem
 {
@@ -10,9 +11,6 @@ namespace DLSU.SpacePirates.WeaponSystem
 		[Tooltip("This weapon equipment.")]
 		[SerializeField]
 		private WeaponEquipment equipment;
-		[Tooltip("The weapon's ship barrel sprite renderer.")]
-		[SerializeField]
-		private ShipBarrel shipBarrel;
 		[Tooltip("Where the projectile will be spawned.")]
 		[SerializeField]
 		private Transform shipTip;
@@ -25,6 +23,9 @@ namespace DLSU.SpacePirates.WeaponSystem
 			"the weapon is replaced with the `WeaponDatabase` default weapon.")]
 		[SerializeField]
 		private bool useDefaultWeaponOnDepletion;
+		[SerializeField]
+		private UnityEvent onWeaponShot;
+
 		/// <summary>
 		/// This needs to be below or equal to 0f
 		/// in order to fire.
@@ -36,19 +37,6 @@ namespace DLSU.SpacePirates.WeaponSystem
 			get => equipment;
 			private set => equipment = value;
 		}
-
-		/// <summary>
-		/// Updates the ship's barrel sprite.
-		/// </summary>
-		public WeaponBarrel WeaponBarrel
-		{
-			set
-			{
-				if (shipBarrel != null)
-					shipBarrel.WeaponBarrel = value;
-			}
-		}
-
 		/// <summary>
 		/// The weapon.
 		/// Use this instead of the `WeaponEquipment`
@@ -60,7 +48,6 @@ namespace DLSU.SpacePirates.WeaponSystem
 			set
 			{
 				equipment.EquippedWeapon = value;
-				WeaponBarrel = value.Barrel;
 			}
 		}
 
@@ -101,44 +88,41 @@ namespace DLSU.SpacePirates.WeaponSystem
 				// On cooldown.
 				return null;
 
-			Weapon weapon = Weapon;
+			Weapon currentWeapon = Weapon;
 
-			if (weapon == null)
+			if (currentWeapon == null)
 				// No weapon.
 				return null;
 
-			if (!ignoreAmmo && !weapon.UnlimitedAmmo)
-			{
-				if (Equipment.Ammo <= 0 && useDefaultWeaponOnDepletion)
-					// Discard current weapon.
-					Weapon = database.DefaultPlayerWeapon;
-
-				if (Equipment.Ammo <= 0)
-					// Insufficient ammo!
-					return null;
-
-				// Decrease ammo.
-				Equipment.Ammo--;
-			}
-
 			// Set on cooldown.
-			cooldown = weapon.FireRate;
+			cooldown = currentWeapon.FireRate;
 
-			if (weapon.ProjectilePrefab == null)
+			if (currentWeapon.ProjectilePrefab == null)
 				// No projectile.
 				return null;
 
 			// Launch projectile.
-			GameObject @object = Instantiate(weapon.ProjectilePrefab, null);
+			GameObject @object = Instantiate(currentWeapon.ProjectilePrefab, null);
 			@object.transform.SetPositionAndRotation(
 				origin,
 				Quaternion.Euler(0f, 0f, Mathf.Atan2(direction.y, direction.x))
 			);
 
-			if (shipBarrel != null)
-            {
-				shipBarrel.ShootBarrel();
-            }
+			onWeaponShot.Invoke();
+
+			if (!ignoreAmmo && !currentWeapon.UnlimitedAmmo)
+			{
+				if (Equipment.Ammo - 1 <= 0 && useDefaultWeaponOnDepletion)
+				{
+					Weapon = database.DefaultPlayerWeapon;
+				}
+				else if (Equipment.Ammo - 1 <= 0)
+				{
+					return null;
+				}
+				// Decrease ammo.
+				Equipment.Ammo--;
+			}
 
 			return @object;
 		}

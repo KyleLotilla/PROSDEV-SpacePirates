@@ -13,10 +13,16 @@ namespace DLSU.SpacePirates.Enemies.SpacePirate
         private Transform barrelTransform;
         [SerializeField]
         private Animator barrelAnimator;
+        [SerializeField]
+        private AudioSource audioSource;
         private float ticks = 0.0f;
         // Start is called before the first frame update
         void Start()
         {
+            if (weapon.ShotSound != null)
+            {
+                audioSource.clip = weapon.ShotSound;
+            }
         }
 
         // Update is called once per frame
@@ -35,6 +41,7 @@ namespace DLSU.SpacePirates.Enemies.SpacePirate
             GameObject projectile = Instantiate(weapon.ProjectilePrefab, barrelTransform.position, barrelTransform.rotation);
             Debug.Assert(projectile != null, "Projectile not spawned");
             barrelAnimator.SetTrigger("shoot");
+            audioSource.Play();
         }
     }
 }

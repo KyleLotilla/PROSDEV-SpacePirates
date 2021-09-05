@@ -40,10 +40,15 @@ namespace DLSU.SpacePirates.HealthSystem
         {
             if (oldHealth > newHealth && newHealth > 0)
             {
-                spriteRenderer.material.color = flashColor;
-                damaged = true;
-                ticks = 0.0f;
+                DisplayDamageFlash();
             }
+        }
+
+        public void DisplayDamageFlash()
+        {
+            spriteRenderer.material.color = flashColor;
+            damaged = true;
+            ticks = 0.0f;
         }
     }
 

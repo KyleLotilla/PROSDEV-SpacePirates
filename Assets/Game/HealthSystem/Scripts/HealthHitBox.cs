@@ -22,6 +22,18 @@ namespace DLSU.SpacePirates.HealthSystem
                 canHit = value;
             }
         }
+
+        public Health Health
+        {
+            get
+            {
+                return health;
+            }
+            set
+            {
+                health = value;
+            }
+        }
         // Start is called before the first frame update
         void Start()
         {

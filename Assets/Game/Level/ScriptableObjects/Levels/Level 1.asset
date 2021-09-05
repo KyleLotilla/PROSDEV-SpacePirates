@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff06adb6846d1f84a93b472c0a2dce91, type: 3}
+  m_Name: Level 1
+  m_EditorClassIdentifier: 
+  encounters:
+  - initialStrength: 1
+    maxStrength: 5
+    enemySpawns:
+    - enemyID: 1
+      spawnDelayTime: 0
+      spawnPosition: {x: 10, y: 0}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+    - enemyID: 2
+      spawnDelayTime: 3
+      spawnPosition: {x: 8.5, y: 4}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+    - enemyID: 0
+      spawnDelayTime: 0
+      spawnPosition: {x: 8.5, y: -3}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+  - initialStrength: 1
+    maxStrength: 3
+    enemySpawns:
+    - enemyID: 0
+      spawnDelayTime: 4
+      spawnPosition: {x: 9, y: 0}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+    - enemyID: 0
+      spawnDelayTime: 2
+      spawnPosition: {x: 8.9, y: 3}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+    - enemyID: 3
+      spawnDelayTime: 0
+      spawnPosition: {x: 8.9, y: 0}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+  - initialStrength: 1
+    maxStrength: 3
+    enemySpawns:
+    - enemyID: 1
+      spawnDelayTime: 2
+      spawnPosition: {x: 9, y: 0}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+    - enemyID: 1
+      spawnDelayTime: 0
+      spawnPosition: {x: 8.9, y: 3}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+  - initialStrength: 1
+    maxStrength: 3
+    enemySpawns:
+    - enemyID: 2
+      spawnDelayTime: 0
+      spawnPosition: {x: 9, y: 0}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+    - enemyID: 0
+      spawnDelayTime: 1
+      spawnPosition: {x: 8.9, y: 3}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+    - enemyID: 0
+      spawnDelayTime: 2
+      spawnPosition: {x: 8.9, y: -1}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+    - enemyID: 0
+      spawnDelayTime: 3
+      spawnPosition: {x: 8.9, y: 1}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+    - enemyID: 0
+      spawnDelayTime: 4
+      spawnPosition: {x: 8.9, y: 2}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+    - enemyID: 0
+      spawnDelayTime: 5
+      spawnPosition: {x: 8.9, y: -1}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+    - enemyID: 0
+      spawnDelayTime: 6
+      spawnPosition: {x: 8.9, y: 2}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+  - initialStrength: 1
+    maxStrength: 3
+    enemySpawns:
+    - enemyID: 3
+      spawnDelayTime: 2
+      spawnPosition: {x: 9, y: 0}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+    - enemyID: 2
+      spawnDelayTime: 3
+      spawnPosition: {x: 8.9, y: 3}
+      spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+  boss:
+    bossID: 0
+    spawnPosition: {x: 5.5, y: 0.03}
+    spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+  background: {fileID: 2100000, guid: 755f1b1dcf75eb241885d0d2f754dfbe, type: 2}

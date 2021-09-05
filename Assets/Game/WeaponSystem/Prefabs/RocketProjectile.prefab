@@ -102,11 +102,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileRigidbody: {fileID: 1490959407824652630}
-  velocity: {x: 5, y: 0}
+  velocity: {x: 15, y: 0}
   hasAcceleration: 1
   minVelocity: {x: 1, y: 0}
-  maxVelocity: {x: 20, y: 0}
-  acceleration: {x: 5, y: 0}
+  maxVelocity: {x: 35, y: 0}
+  acceleration: {x: 20, y: 0}
   accelerationRate: 0.4
 --- !u!50 &1490959407824652630
 Rigidbody2D:
@@ -213,10 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1490959407824652626}
-  explosionSound: {fileID: 8300000, guid: 914cc035f969ae14a9051e5b28d7d859, type: 3}
-  explosionVolume: 0.3
-  destroyOnFinish: 1
-  OnExplosionStart:
+  onDestroyAnimationStart:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1490959407824652631}
@@ -252,6 +249,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnExplosionFinished:
+      - m_Target: {fileID: 11400000, guid: 251970cce9b2c3d4fa85d34c8e23a988, type: 2}
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 914cc035f969ae14a9051e5b28d7d859,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDestroyAnimationFinished:
     m_PersistentCalls:
       m_Calls: []
