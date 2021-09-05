@@ -1,0 +1,293 @@
+fileFormatVersion: 2
+guid: 595b105a18477f04689af9b1bdcc6364
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8139793676193522964
+    second: Insect_death_1
+  - first:
+      213: 1605101187450607093
+    second: Insect_death_2
+  - first:
+      213: 1646742268351343070
+    second: Insect_death_3
+  - first:
+      213: 6695544540953340289
+    second: Insect_death_4
+  - first:
+      213: -483384487021051594
+    second: Insect_death_5
+  - first:
+      213: 7668919465916207031
+    second: Insect_death_6
+  - first:
+      213: 8361531840363930797
+    second: Insect_death_7
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Insect_death_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 152
+        width: 74
+        height: 81
+      alignment: 9
+      pivot: {x: 0.51590157, y: 0.47457698}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8cdd7d7a1308390800000000000000
+      internalID: -7818194356164245263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insect_death_1
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 147
+        width: 84
+        height: 99
+      alignment: 9
+      pivot: {x: 0.5455277, y: 0.45839885}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea938927c4a90f80800000000000000
+      internalID: -8139793676193522964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insect_death_2
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 151
+        width: 73
+        height: 92
+      alignment: 9
+      pivot: {x: 0.48791024, y: 0.45843107}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f51d8a9607764610800000000000000
+      internalID: 1605101187450607093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insect_death_3
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 142
+        width: 85
+        height: 106
+      alignment: 9
+      pivot: {x: 0.54153085, y: 0.47502252}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed9e3b54e576ad610800000000000000
+      internalID: 1646742268351343070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insect_death_4
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 125
+        width: 102
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5259567, y: 0.5072339}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1896455194a5bec50800000000000000
+      internalID: 6695544540953340289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insect_death_5
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 12
+        width: 102
+        height: 118
+      alignment: 9
+      pivot: {x: 0.52307284, y: 0.49002787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6310d21ce5caa49f0800000000000000
+      internalID: -483384487021051594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insect_death_6
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 12
+        width: 104
+        height: 118
+      alignment: 9
+      pivot: {x: 0.5282863, y: 0.47506958}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf83016f997d6a60800000000000000
+      internalID: 7668919465916207031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insect_death_7
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 49
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4a20358e02a0470800000000000000
+      internalID: 8361531840363930797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
