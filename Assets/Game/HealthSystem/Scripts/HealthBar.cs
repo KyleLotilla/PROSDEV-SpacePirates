@@ -74,7 +74,7 @@ namespace DLSU.SpacePirates.HealthSystem
         private void ChangeSliderColor(Color color)
         {
             ColorBlock colorBlock = slider.colors;
-            colorBlock.normalColor = color;
+            colorBlock.disabledColor = color;
             slider.colors = colorBlock;
         }
 

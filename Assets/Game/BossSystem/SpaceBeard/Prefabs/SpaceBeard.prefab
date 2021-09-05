@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 9084863961635695517}
+  canHit: 1
 --- !u!1 &9084863961635695513
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +663,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 9084863961635695490}
+        m_MethodName: Sleep
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDestroyAnimationFinished:
     m_PersistentCalls:
       m_Calls: []
@@ -910,6 +922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 9084863961635695517}
+  canHit: 1
 --- !u!114 &9084863962077303300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,6 +1008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 9084863961635695517}
+  canHit: 1
 --- !u!114 &9084863962287027390
 MonoBehaviour:
   m_ObjectHideFlags: 0
