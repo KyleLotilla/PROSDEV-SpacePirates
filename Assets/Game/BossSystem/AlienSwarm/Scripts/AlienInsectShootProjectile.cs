@@ -10,6 +10,8 @@ namespace DLSU.SpacePirates.BossSystem.AlienSwarm
         [SerializeField]
         private GameObject projectilePrefab;
         [SerializeField]
+        private Animator animator;
+        [SerializeField]
         private Vector2 minProjectileSpeed;
         [SerializeField]
         private Vector2 maxProjectileSpeed;
@@ -17,8 +19,6 @@ namespace DLSU.SpacePirates.BossSystem.AlienSwarm
         private Vector2Variable topRightBound;
         [SerializeField]
         private Vector2Variable bottomLeftBound;
-        private float ticks = 0.0f;
-        private float rate = 1.0f;
         // Start is called before the first frame update
         void Start()
         {
@@ -28,14 +28,6 @@ namespace DLSU.SpacePirates.BossSystem.AlienSwarm
         // Update is called once per frame
         void Update()
         {
-            /*
-            ticks += Time.deltaTime;
-            if (ticks >= rate)
-            {
-                ShootProjectile();
-                ticks = 0.0f;
-            }
-            */
         }
 
         public void ShootProjectile()
@@ -44,6 +36,7 @@ namespace DLSU.SpacePirates.BossSystem.AlienSwarm
             Rigidbody2D projectileRigidBody = projectile.GetComponent<Rigidbody2D>();
             if (projectileRigidBody != null)
             {
+                animator.SetTrigger("shoot");
                 float currentVelocityX = Random.Range(minProjectileSpeed.x, maxProjectileSpeed.x) * transform.right.x;
                 float currentVelocityY = Random.Range(minProjectileSpeed.y, maxProjectileSpeed.y);
                 float distanceFromTopBound = Mathf.Abs(transform.position.y - topRightBound.Value.y);

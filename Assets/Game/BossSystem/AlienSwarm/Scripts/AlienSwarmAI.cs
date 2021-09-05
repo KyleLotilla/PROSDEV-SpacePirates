@@ -23,6 +23,8 @@ namespace DLSU.SpacePirates.BossSystem.AlienSwarm
         [SerializeField]
         private int alienInsectCount;
         [SerializeField]
+        private float projectileShotChance;
+        [SerializeField]
         private Vector2Variable topRightBound;
         [SerializeField]
         private Vector2Variable bottomLeftBound;
@@ -36,6 +38,8 @@ namespace DLSU.SpacePirates.BossSystem.AlienSwarm
         private int numberOfNonMovingPairs;
         [SerializeField]
         private float phaseTwoAttackRate;
+        [SerializeField]
+        private AudioSource audioSource;
         private AlienSwarmState currentState = AlienSwarmState.PHASE_ONE_START;
         private List<AlienInsectAI> alienAIs;
         private List<AlienInsectShootProjectile> alienInsectShootProjectiles;
@@ -119,10 +123,7 @@ namespace DLSU.SpacePirates.BossSystem.AlienSwarm
         private void TransitionIntoPhaseOneProjectileShot()
         {
             ticks = 0.0f;
-            foreach (AlienInsectShootProjectile alienInsectShootProjectile in alienInsectShootProjectiles)
-            {
-                alienInsectShootProjectile.ShootProjectile();
-            }
+            AlienSwarmProjectileShot();
             currentState = AlienSwarmState.PHASE_ONE_PROJECTILE_SHOT;
         }
 
@@ -186,7 +187,17 @@ namespace DLSU.SpacePirates.BossSystem.AlienSwarm
             if (ticks >= phaseTwoAttackRate)
             {
                 ticks = 0.0f;
-                foreach (AlienInsectShootProjectile alienInsectShootProjectile in alienInsectShootProjectiles)
+                AlienSwarmProjectileShot();
+            }
+        }
+
+        public void AlienSwarmProjectileShot()
+        {
+            audioSource.Play();
+            foreach (AlienInsectShootProjectile alienInsectShootProjectile in alienInsectShootProjectiles)
+            {
+                float rand = UnityEngine.Random.Range(1.0f, 100.0f);
+                if (rand <= projectileShotChance)
                 {
                     alienInsectShootProjectile.ShootProjectile();
                 }

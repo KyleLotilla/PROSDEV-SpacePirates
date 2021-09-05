@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 5567321374034651099}
   - component: {fileID: 185655134358783688}
   - component: {fileID: 4319527151549827860}
+  - component: {fileID: 1246913223131702493}
   m_Layer: 0
   m_Name: AlienSwarm
   m_TagString: Alien Swarm
@@ -92,6 +93,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2768733209590678681}
+  - {fileID: 3213719056648012662}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -110,13 +112,15 @@ MonoBehaviour:
   alienInsectPrefab: {fileID: 6160583842092222374, guid: 28589eae407e1b241953a58fe2caa992,
     type: 3}
   alienInsectCount: 30
+  projectileShotChance: 50
   topRightBound: {fileID: 11400000, guid: f51ed03d70b59fb4ba76c5a17da83cc8, type: 2}
   bottomLeftBound: {fileID: 11400000, guid: 2f32348eb206c5f459b215f3052ad6dc, type: 2}
   health: {fileID: 8208881431429882163}
   phaseOneStartTime: 2
-  phaseOneCooldownAfterShot: 1
+  phaseOneCooldownAfterShot: 1.5
   numberOfNonMovingPairs: 2
   phaseTwoAttackRate: 2
+  audioSource: {fileID: 5567321374034651099}
 --- !u!114 &8208881431429882163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,8 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1908003015eb5454ca19e4e57789de7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
-  currentHealth: 300
+  maxHealth: 400
+  currentHealth: 400
   onHealthChanged:
     m_PersistentCalls:
       m_Calls:
@@ -169,7 +173,41 @@ MonoBehaviour:
         m_CallState: 2
   onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 0d125d84f37c882478814599ec931913, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3986003088811821013}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 251970cce9b2c3d4fa85d34c8e23a988, type: 2}
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: eea6a446237a27f4892fb3dd597102aa,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &519261811270786900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,9 +231,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 671956ada41dcbf43bbbb84ac168e575, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -307,3 +345,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: {fileID: 11400000, guid: d7e45ca9c5a445c4faa9028accadaf09, type: 2}
   scorePerDamage: 10
+--- !u!114 &1246913223131702493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763288213597725747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13cff954e1754024a99ea4d6a8de62df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelComplete: {fileID: 11400000, guid: d30b60fe3ccd18245b33008087b5e9c2, type: 2}
+  alienInsectCount: 30
+--- !u!1 &9221639508566302969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3213719056648012662}
+  - component: {fileID: 5395980538614981816}
+  m_Layer: 0
+  m_Name: AlienInsectDeath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3213719056648012662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9221639508566302969}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1776098895362084136}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5395980538614981816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9221639508566302969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d9f57caa7a1144cb5875c63b6b805c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 9f34b3f21d6537941aeb8d2633a0ec6b, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1246913223131702493}
+        m_MethodName: OnAlienInsectDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

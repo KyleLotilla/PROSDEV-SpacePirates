@@ -78,32 +78,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 631990565943748290, guid: 5ba6780d08a1d3d44b53308689a7da44,
         type: 3}
-      propertyPath: OnExplosionFinished.m_PersistentCalls.m_Calls.Array.size
+      propertyPath: onDestroyAnimationFinished.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 631990565943748290, guid: 5ba6780d08a1d3d44b53308689a7da44,
         type: 3}
-      propertyPath: OnExplosionFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      propertyPath: onDestroyAnimationFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 631990565943748290, guid: 5ba6780d08a1d3d44b53308689a7da44,
         type: 3}
-      propertyPath: OnExplosionFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: onDestroyAnimationFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 8610267995166196173}
     - target: {fileID: 631990565943748290, guid: 5ba6780d08a1d3d44b53308689a7da44,
         type: 3}
-      propertyPath: OnExplosionFinished.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      propertyPath: onDestroyAnimationFinished.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 631990565943748290, guid: 5ba6780d08a1d3d44b53308689a7da44,
         type: 3}
-      propertyPath: OnExplosionFinished.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: onDestroyAnimationFinished.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Spawn
       objectReference: {fileID: 0}
     - target: {fileID: 631990565943748290, guid: 5ba6780d08a1d3d44b53308689a7da44,
         type: 3}
-      propertyPath: OnExplosionFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      propertyPath: onDestroyAnimationFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 631990565943748294, guid: 5ba6780d08a1d3d44b53308689a7da44,

@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DLSU.SpacePirates.Effects.Explosion
+namespace DLSU.SpacePirates.Util
 {
-    public class ExplodeOnCollide : MonoBehaviour
+    public class DestroyAnimationOnCollide : MonoBehaviour
     {
         [SerializeField]
-        private Explosion explosion;
+        private DestroyAnimation explosion;
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.layer != LayerMask.NameToLayer("Deadzone") && enabled)
             {
-                explosion.Explode();
+                explosion.StartDestroyAnimation();
             }
         }
     }
