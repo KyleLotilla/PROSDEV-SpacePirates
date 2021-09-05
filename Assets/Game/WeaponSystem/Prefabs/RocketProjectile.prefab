@@ -213,8 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1490959407824652626}
-  destroyOnFinish: 1
-  OnExplosionStart:
+  onDestroyAnimationStart:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1490959407824652631}
@@ -262,6 +261,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnExplosionFinished:
+  onDestroyAnimationFinished:
     m_PersistentCalls:
       m_Calls: []

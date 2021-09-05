@@ -112,7 +112,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -7620888596069422793}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_Position: {x: 220, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4192195952364119946}
     m_Position: {x: 350, y: 130, z: 0}
@@ -135,7 +135,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: explode
+    m_ConditionEvent: destroy
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4192195952364119946}
@@ -160,7 +160,7 @@ AnimatorController:
   m_Name: EnemyMine
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: explode
+  - m_Name: destroy
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0

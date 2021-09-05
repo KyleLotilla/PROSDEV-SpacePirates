@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 9084863961635695517}
+  canHit: 1
 --- !u!1 &9084863961635695513
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +517,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3930210666998032673}
-        m_MethodName: Explode
+        m_MethodName: StartDestroyAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -581,21 +582,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 9084863961635695516}
-  destroyOnFinish: 1
-  OnExplosionStart:
+  onDestroyAnimationStart:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9084863961635695490}
-        m_MethodName: Sleep
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 9084863962287027384}
         m_MethodName: SetActive
         m_Mode: 6
@@ -629,8 +618,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 9084863961980545078}
-        m_MethodName: set_enabled
+      - m_Target: {fileID: 9084863961980545072}
+        m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -640,7 +629,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4735171291746460202}
+      - m_Target: {fileID: 8973978493972333193}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9084863961635695491}
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -663,11 +663,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnExplosionFinished:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: d30b60fe3ccd18245b33008087b5e9c2, type: 2}
-        m_MethodName: Raise
+      - m_Target: {fileID: 9084863961635695490}
+        m_MethodName: Sleep
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -677,6 +674,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onDestroyAnimationFinished:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5605780287631678145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -922,6 +922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 9084863961635695517}
+  canHit: 1
 --- !u!114 &9084863962077303300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1007,6 +1008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 9084863961635695517}
+  canHit: 1
 --- !u!114 &9084863962287027390
 MonoBehaviour:
   m_ObjectHideFlags: 0

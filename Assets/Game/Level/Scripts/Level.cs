@@ -46,6 +46,21 @@ namespace DLSU.SpacePirates.Level
                 boss = value;
             }
         }
+
+        [SerializeField]
+        private Material background;
+
+        public Material Background
+        {
+            get
+            {
+                return background;
+            }
+            set
+            {
+                background = value;
+            }
+        }
     }
 }
 
