@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BG2
+  m_Name: BG6
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -40,9 +40,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 93b4fbe62c7af074eb3d459f3fca7a25, type: 3}
+        m_Texture: {fileID: 2800000, guid: 80f25e6e6664ed94fb35cdcb5c5e5d41, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 18.203121, y: 0}
+        m_Offset: {x: 13.532857, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
