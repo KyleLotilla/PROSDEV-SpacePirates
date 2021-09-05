@@ -10,6 +10,7 @@ TagManager:
   - PlayerLaser
   - EnemyLaser
   - Space Bread
+  - Cthulu
   layers:
   - Default
   - TransparentFX

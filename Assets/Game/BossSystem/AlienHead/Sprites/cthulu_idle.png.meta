@@ -147,9 +147,9 @@ TextureImporter:
       name: cthulu_idle_1
       rect:
         serializedVersion: 2
-        x: 202
+        x: 204
         y: 2
-        width: 197
+        width: 195
         height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -168,9 +168,9 @@ TextureImporter:
       name: cthulu_idle_2
       rect:
         serializedVersion: 2
-        x: 404
+        x: 405
         y: 2
-        width: 197
+        width: 195
         height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -189,9 +189,9 @@ TextureImporter:
       name: cthulu_idle_3
       rect:
         serializedVersion: 2
-        x: 605
+        x: 606
         y: 2
-        width: 197
+        width: 196
         height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -210,9 +210,9 @@ TextureImporter:
       name: cthulu_idle_4
       rect:
         serializedVersion: 2
-        x: 805
-        y: 1
-        width: 197
+        x: 806
+        y: 2
+        width: 196
         height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -231,10 +231,10 @@ TextureImporter:
       name: cthulu_idle_5
       rect:
         serializedVersion: 2
-        x: 1006
-        y: 1
-        width: 199
-        height: 193
+        x: 1008
+        y: 2
+        width: 195
+        height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: cthulu_idle_6
       rect:
         serializedVersion: 2
-        x: 1207
-        y: 1
-        width: 199
-        height: 193
+        x: 1208
+        y: 2
+        width: 197
+        height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: cthulu_idle_7
       rect:
         serializedVersion: 2
-        x: 1408
-        y: 1
-        width: 199
-        height: 193
+        x: 1409
+        y: 2
+        width: 197
+        height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: cthulu_idle_8
       rect:
         serializedVersion: 2
-        x: 1609
-        y: 1
-        width: 199
-        height: 193
+        x: 1611
+        y: 2
+        width: 195
+        height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: cthulu_idle_9
       rect:
         serializedVersion: 2
-        x: 1810
-        y: 1
-        width: 199
-        height: 193
+        x: 1811
+        y: 2
+        width: 196
+        height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: cthulu_idle_10
       rect:
         serializedVersion: 2
-        x: 2010
+        x: 2012
         y: 2
-        width: 200
-        height: 192
+        width: 197
+        height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: cthulu_idle_11
       rect:
         serializedVersion: 2
-        x: 2212
+        x: 2213
         y: 2
-        width: 199
-        height: 192
+        width: 196
+        height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +378,10 @@ TextureImporter:
       name: cthulu_idle_12
       rect:
         serializedVersion: 2
-        x: 2413
+        x: 2415
         y: 2
-        width: 199
-        height: 192
+        width: 195
+        height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,10 +399,10 @@ TextureImporter:
       name: cthulu_idle_13
       rect:
         serializedVersion: 2
-        x: 2614
-        y: 1
-        width: 199
-        height: 192
+        x: 2615
+        y: 2
+        width: 197
+        height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

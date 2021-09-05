@@ -56,6 +56,18 @@ namespace DLSU.SpacePirates.BossSystem.AlienHead
 
         private GameObject beam;
 
+        [SerializeField]
+        private Animator AlienHeadAnimations;
+
+        [SerializeField]
+        private AudioSource ForwardAttackSFX;
+
+        [SerializeField]
+        private AudioSource ChargeUpSFX;
+
+        [SerializeField]
+        private AudioSource FireLaserSFX;
+
 
         // Start is called before the first frame update
         void Start()
@@ -144,6 +156,7 @@ namespace DLSU.SpacePirates.BossSystem.AlienHead
 
         public void RegularMovement()
         {
+            AlienHeadAnimations.SetBool("AlienHeadIdleAnimation", true);
             if (transform.position.y >= topBound)
             {
                 alienRigidBody.velocity = new Vector2(0.0f, -speed);
@@ -169,6 +182,9 @@ namespace DLSU.SpacePirates.BossSystem.AlienHead
 
         public void ChargeLaser()
         {
+            AlienHeadAnimations.SetBool("AlienHeadIdleAnimation", false);
+            AlienHeadAnimations.SetBool("AlienHeadChargeUp", true);
+            ChargeUpSFX.Play();
             if (ChargeUpTime > 0)
             {
                 ChargeUpTime -= Time.deltaTime;
@@ -183,12 +199,14 @@ namespace DLSU.SpacePirates.BossSystem.AlienHead
         public void TransitionIntoFireLaser()
         {
             //RegularMovement();
+            ChargeUpSFX.clip = FireLaserSFX.clip;
             currentState = AlienHeadState.LASER;
         }
 
         public void TransitionIntoLaserAttackEnd()
         {
-            if(LaserFireTime > 0)
+            AlienHeadAnimations.SetBool("AlienHeadAfterFire", true);
+            if (LaserFireTime > 0)
             {
                 LaserFireTime -= Time.deltaTime;
                 alienRigidBody.velocity = new Vector2(0.0f, 0.0f);
@@ -202,6 +220,7 @@ namespace DLSU.SpacePirates.BossSystem.AlienHead
 
         public void ForwardAttack()
         {
+            ForwardAttackSFX.Play();
             if (transform.position.x <= leftBound)
             {
                 TransitionIntoForwardAttackEnd();
@@ -210,6 +229,9 @@ namespace DLSU.SpacePirates.BossSystem.AlienHead
 
         public void LaserAttack()
         {
+            ChargeUpSFX.Play();
+            AlienHeadAnimations.SetBool("AlienHeadChargeUp", false);
+            AlienHeadAnimations.SetBool("AlienHeadIdleAnimation", false);
             alienRigidBody.velocity = new Vector2(0.0f, 0.0f);
             beam = Instantiate(laserProjectile, spawnLaserPosition.position, Quaternion.identity);
             currentState = AlienHeadState.LASER_FIRING;
@@ -219,11 +241,13 @@ namespace DLSU.SpacePirates.BossSystem.AlienHead
         public void TransitionIntoForwardAttackEnd()
         {
             alienRigidBody.velocity = new Vector2(speed, 0.0f);
+            ForwardAttackSFX.Stop();
             currentState = AlienHeadState.FORWARD_ATTACK_END;
         }
 
         public void ForwardAttackEnd()
         {
+            //ForwardAttackSFX.Stop();
             if (transform.position.x >= rightBound)
             {
                 TransitionIntoRegularMovement();
