@@ -226,8 +226,17 @@ namespace DLSU.SpacePirates.BossSystem.AlienHead
             if (ticks >= beamFireTime)
             {
                 Destroy(currentBeamInstance);
+                currentBeamInstance = null;
                 animator.SetBool("openMouth", false);
                 TransitionIntoRegularMovement();
+            }
+        }
+
+        public void OnDeath()
+        {
+            if (currentBeamInstance != null)
+            {
+                Destroy(currentBeamInstance);
             }
         }
     }

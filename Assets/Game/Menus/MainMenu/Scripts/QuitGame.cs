@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuitGame : MonoBehaviour
+namespace DLSU.SpacePirates.Menus.MainMenu
 {
-    public void ExitGame()
+    public class QuitGame : MonoBehaviour
     {
-    	Application.Quit();
+        public void ExitGame()
+        {
+            Application.Quit();
+        }
     }
 }

@@ -61,6 +61,20 @@ namespace DLSU.SpacePirates.Level
                 background = value;
             }
         }
+
+        [SerializeField]
+        private Level nextLevel;
+        public Level NextLevel
+        {
+            get
+            {
+                return nextLevel;
+            }
+            set
+            {
+                nextLevel = value;
+            }
+        }
     }
 }
 

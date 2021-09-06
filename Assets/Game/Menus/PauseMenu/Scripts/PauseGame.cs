@@ -2,44 +2,74 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DLSU.SpacePirates.Util;
 
-public class PauseGame : MonoBehaviour
+namespace DLSU.SpacePirates.Menus.PauseMenu
 {
-	public GameObject Panel;
-	public GameObject Player;
-    // Start is called before the first frame update
-    void Start()
+    public class PauseGame : MonoBehaviour
     {
+        private bool isInAnotherMenu;
+        [SerializeField]
+        private GameObject pauseMenuPanel;
+        [SerializeField]
+        private GameEvent gamePaused;
+        [SerializeField]
+        private GameEvent gameResumed;
 
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-     	{
-         	if(Panel.activeSelf){
-         		Panel.SetActive(false);
-             	Time.timeScale = 1;
-         	}
-         	else if(!Player.activeSelf){
-         		Panel.SetActive(false);
-         	}
-         	else if(!Panel.activeSelf){
-         		Panel.SetActive(true);
-             	Time.timeScale = 0;
-         	}
-     	}
-    }
+        }
 
-    public void Resume(){
-        Panel.SetActive(false);
-        Time.timeScale = 1;
-    }
+        // Update is called once per frame
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (!isInAnotherMenu)
+                {
+                    if (pauseMenuPanel.activeSelf)
+                    {
+                        Resume();
+                    }
+                    else
+                    {
+                        Pause();
+                    }
+                }
+            }
+        }
 
-    public void Quit()
-    {
-    	Time.timeScale = 1;
-        SceneManager.LoadScene("Main Menu");
+        public void Resume()
+        {
+            pauseMenuPanel.SetActive(false);
+            Time.timeScale = 1;
+            gameResumed.Raise();
+        }
+
+        public void Pause()
+        {
+            pauseMenuPanel.SetActive(true);
+            Time.timeScale = 0;
+            gamePaused.Raise();
+        }
+
+        public void Quit()
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene("Main Menu");
+        }
+
+        public void OnAnotherMenuEnter()
+        {
+            isInAnotherMenu = true;
+            if (pauseMenuPanel.activeSelf)
+            {
+                pauseMenuPanel.SetActive(false);
+                Time.timeScale = 1;
+            }
+        }
     }
 }
+

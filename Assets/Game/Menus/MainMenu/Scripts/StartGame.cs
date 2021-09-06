@@ -3,19 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DLSU.SpacePirates.Level;
+using DLSU.SpacePirates.Scoring;
 
-public class StartGame : MonoBehaviour
+namespace DLSU.SpacePirates.Menus.MainMenu
 {
-	public Image black;
-	public Animator anim;
+    public class StartGame : MonoBehaviour
+    {
+        [SerializeField]
+        private Image black;
+        [SerializeField]
+        private Animator anim;
+        [SerializeField]
+        private LevelVariable currentLevel;
+        [SerializeField]
+        private Level.Level initialLevel;
+        [SerializeField]
+        private Score score;
 
-    public void buttonPress(){
-    	StartCoroutine(Fading());
-    }
+        public void StartGameplay()
+        {
+            currentLevel.Value = initialLevel;
+            score.ResetScore();
+            StartCoroutine(Fading());
+        }
 
-    IEnumerator Fading(){
-    	anim.SetBool("Fade", true);
-    	yield return new WaitUntil(()=>black.color.a == 1);
-    	SceneManager.LoadScene("Gameplay");
+        IEnumerator Fading()
+        {
+            anim.SetBool("Fade", true);
+            yield return new WaitUntil(() => black.color.a == 1);
+            SceneManager.LoadScene("Gameplay");
+        }
     }
 }
+

@@ -16,6 +16,7 @@ namespace DLSU.SpacePirates.Scoring
 
         void Start()
         {
+            OnScoreChanged();
         }
 
         // Update is called once per frame

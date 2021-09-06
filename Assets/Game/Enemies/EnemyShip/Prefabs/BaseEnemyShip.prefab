@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 3668460512070546976}
   - component: {fileID: 5252977587865915330}
   - component: {fileID: 6808082330785933911}
+  - component: {fileID: 4658010210297553041}
   m_Layer: 10
   m_Name: BaseEnemyShip
   m_TagString: Untagged
@@ -506,6 +507,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 5252977587865915330}
   damageSound: {fileID: 8300000, guid: 3b8e3c25d9f2b574db24a954f0fe8301, type: 3}
+--- !u!114 &4658010210297553041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631990565943748294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc3b472907e4be4abf24d63a337e130, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &631990566387676735
 GameObject:
   m_ObjectHideFlags: 0

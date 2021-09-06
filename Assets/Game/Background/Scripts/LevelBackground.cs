@@ -19,7 +19,10 @@ namespace DLSU.SpacePirates.Background
 
         void Start()
         {
-            meshRenderer.material = currentLevel.Value.Background;
+            if (currentLevel != null)
+            {
+                meshRenderer.material = currentLevel.Value.Background;
+            }
         }
 
         void Update()

@@ -101,3 +101,4 @@ MonoBehaviour:
     spawnPosition: {x: 5.5, y: 0.03}
     spawnRotation: {x: 0, y: 0, z: 0, w: 1}
   background: {fileID: 2100000, guid: 755f1b1dcf75eb241885d0d2f754dfbe, type: 2}
+  nextLevel: {fileID: 11400000, guid: 0145b5ffe83f9f248a1be3625943f893, type: 2}
