@@ -30,6 +30,13 @@ namespace DLSU.SpacePirates.Util
         {
             currentValue.PlayOneShot(clip);
         }
+
+        public void Play(AudioClip clip)
+        {
+            currentValue.Stop();
+            currentValue.clip = clip;
+            currentValue.Play();
+        }
     }
 }
 
