@@ -26,7 +26,7 @@ namespace DLSU.SpacePirates.HealthSystem
                 ticks += Time.deltaTime;
                 if (ticks >= invulnerableTime)
                 {
-                    ticks += 0.0f;
+                    ticks = 0.0f;
                     isDamaged = false;
                     health.IsInvulnerable = false;
                 }

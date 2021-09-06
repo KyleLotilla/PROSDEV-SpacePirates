@@ -737,7 +737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3405137424371468100}
   flashColor: {r: 1, g: 0, b: 0, a: 1}
-  flashTime: 1
+  flashTime: 1.5
 --- !u!114 &8914173842991773715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,7 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c97cd90b0770f4891d82087318e0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invulnerableTime: 1
+  invulnerableTime: 1.5
   health: {fileID: 2725202568284863349}
 --- !u!114 &2369461839252749270
 MonoBehaviour:
