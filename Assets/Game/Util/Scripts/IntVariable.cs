@@ -24,6 +24,11 @@ namespace DLSU.SpacePirates.Util
 
         private void OnEnable()
         {
+            ResetToDefaultValue();
+        }
+
+        public void ResetToDefaultValue()
+        {
             currentValue = defaultValue;
         }
     }

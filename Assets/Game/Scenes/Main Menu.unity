@@ -1244,6 +1244,7 @@ MonoBehaviour:
   currentLevel: {fileID: 0}
   initialLevel: {fileID: 0}
   score: {fileID: 0}
+  currentPlayerHealth: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -2697,6 +2698,8 @@ MonoBehaviour:
   currentLevel: {fileID: 11400000, guid: 0d5d58f030783cf44977cd208e680891, type: 2}
   initialLevel: {fileID: 11400000, guid: fcd21654046cdf4498d9657ce9e64edc, type: 2}
   score: {fileID: 11400000, guid: d7e45ca9c5a445c4faa9028accadaf09, type: 2}
+  currentPlayerHealth: {fileID: 11400000, guid: f4e3b232f28164242a7a449b0e9bde98,
+    type: 2}
 --- !u!1 &1607652777
 GameObject:
   m_ObjectHideFlags: 0

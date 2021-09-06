@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1419176072119282364, guid: 67e48d8977df28445bcb9b42313ef939,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2918025486930814122, guid: 67e48d8977df28445bcb9b42313ef939,
         type: 3}
       propertyPath: velocity.x

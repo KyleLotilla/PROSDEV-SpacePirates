@@ -52,11 +52,29 @@ namespace DLSU.SpacePirates.HealthSystem
                 return onDeath;
             }
         }
+        [SerializeField]
+        private bool isInvulnerable = false;
+        public bool IsInvulnerable
+        {
+            get
+            {
+                return IsInvulnerable;
+            }
+            set
+            {
+                isInvulnerable = value;
+            }
+        }
+        [SerializeField]
+        private bool initializeMaxHealthToCurrentHealth = true;
 
         private void Start()
         {
-            currentHealth = maxHealth;
-            onHealthChanged?.Invoke(currentHealth, currentHealth);
+            if (initializeMaxHealthToCurrentHealth)
+            {
+                currentHealth = maxHealth;
+                onHealthChanged?.Invoke(currentHealth, currentHealth);
+            }
         }
 
         private void Update()
@@ -66,12 +84,15 @@ namespace DLSU.SpacePirates.HealthSystem
 
         public void TakeDamage(int damage)
         {
-            int oldHealth = currentHealth;
-            currentHealth = Mathf.Max(currentHealth - damage, 0);
-            onHealthChanged?.Invoke(oldHealth, currentHealth);
-            if (currentHealth <= 0)
+            if (!isInvulnerable)
             {
-                onDeath?.Invoke();
+                int oldHealth = currentHealth;
+                currentHealth = Mathf.Max(currentHealth - damage, 0);
+                onHealthChanged?.Invoke(oldHealth, currentHealth);
+                if (currentHealth <= 0)
+                {
+                    onDeath?.Invoke();
+                }
             }
         }
 

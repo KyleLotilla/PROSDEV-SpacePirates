@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using DLSU.SpacePirates.Level;
 using DLSU.SpacePirates.Scoring;
+using DLSU.SpacePirates.Util;
 
 namespace DLSU.SpacePirates.Menus.MainMenu
 {
@@ -20,11 +21,14 @@ namespace DLSU.SpacePirates.Menus.MainMenu
         private Level.Level initialLevel;
         [SerializeField]
         private Score score;
+        [SerializeField]
+        private IntVariable currentPlayerHealth;
 
         public void StartGameplay()
         {
             currentLevel.Value = initialLevel;
             score.ResetScore();
+            currentPlayerHealth.ResetToDefaultValue();
             StartCoroutine(Fading());
         }
 

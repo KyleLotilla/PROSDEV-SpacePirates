@@ -142,7 +142,7 @@ PrefabInstance:
     - target: {fileID: 3600657901907830902, guid: a713e0e4b95f0ac4982bcb03ef721b09,
         type: 3}
       propertyPath: velocity.y
-      value: -2
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5359914045240541422, guid: a713e0e4b95f0ac4982bcb03ef721b09,
         type: 3}
@@ -232,7 +232,7 @@ PrefabInstance:
     - target: {fileID: 3600657901907830902, guid: a713e0e4b95f0ac4982bcb03ef721b09,
         type: 3}
       propertyPath: velocity.y
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5359914045240541422, guid: a713e0e4b95f0ac4982bcb03ef721b09,
         type: 3}
